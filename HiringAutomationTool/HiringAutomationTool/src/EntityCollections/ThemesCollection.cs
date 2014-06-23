@@ -22,6 +22,33 @@ namespace HiringAutomationTool
             }
             return null;        
         }
+        public static void TurnActive(string themeName)
+        {
+            foreach (Themes x in themesList)
+            {
+                if (x.ThemeName.Equals(themeName))
+                {
+                    x.IsActive = true;
+                }
+                else {
+                    x.IsActive = false;
+                }
+            }
+        }
+        public static Themes GetActive()
+        {
+            if (themesList != null)
+            {
+                foreach (Themes x in themesList)
+                {
+                    if (x.IsActive == true)
+                    {
+                        return x;
+                    }
+                }
+            }
+                return null;
+        }
        public static Themes Contains(string t)
         {
             foreach (Themes x in themesList)

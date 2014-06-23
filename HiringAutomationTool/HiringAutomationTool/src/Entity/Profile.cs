@@ -15,7 +15,14 @@ namespace HiringAutomationTool
             get { return email; }
             set { email = value; }
         }
+        private bool isActive;
 
+        public bool IsActive
+        {
+            get { return isActive; }
+            set { isActive = value; }
+        }
+        
         private string password;
 
         public string Password

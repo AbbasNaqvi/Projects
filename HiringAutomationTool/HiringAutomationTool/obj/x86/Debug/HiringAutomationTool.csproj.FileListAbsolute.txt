@@ -1,7 +1,7 @@
-c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\HiringAutomationTool\HiringAutomationTool\bin\Debug\HiringAutomationTool.exe
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\HiringAutomationTool\HiringAutomationTool\bin\Debug\HiringAutomationTool.exe
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\HiringAutomationTool\HiringAutomationTool\bin\Debug\HiringAutomationTool.pdb
 C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\HiringAutomationTool\HiringAutomationTool\obj\x86\Debug\HiringAutomationTool.Form1.resources
 C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\HiringAutomationTool\HiringAutomationTool\obj\x86\Debug\HiringAutomationTool.Properties.Resources.resources
 C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\HiringAutomationTool\HiringAutomationTool\obj\x86\Debug\HiringAutomationTool.csproj.GenerateResource.Cache
-C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\HiringAutomationTool\HiringAutomationTool\bin\Debug\HiringAutomationTool.pdb
 C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\HiringAutomationTool\HiringAutomationTool\obj\x86\Debug\HiringAutomationTool.exe
 C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\HiringAutomationTool\HiringAutomationTool\obj\x86\Debug\HiringAutomationTool.pdb

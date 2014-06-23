@@ -75,6 +75,15 @@ namespace HiringAutomationTool
             BackColor = "Window";
             TopColor = "ControlLight";
         }
+
+        private bool isActive;
+
+        public bool IsActive
+        {
+            get { return isActive; }
+            set { isActive = value; }
+        }
+        
         private string themeName;
 
         public string ThemeName

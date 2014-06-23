@@ -30,8 +30,16 @@ namespace HiringAutomationTool
                                 break;
                             case "TopColor":
                                 theme.TopColor = reader.ReadString();
+                                break;
+                            case "IsActive":
+                                bool temp;
+                                bool.TryParse(reader.ReadString(), out temp);
+                                theme.IsActive = temp;
                                 if (theme.ThemeName.Equals("Default") == false)
-                                    ThemesCollection.themesList.Add(theme);
+                                    if (ThemesCollection.Contains(theme.ThemeName)==null)
+                                    {
+                                        ThemesCollection.themesList.Add(theme);
+                                    }
                                 break;
                         }
                        
@@ -54,6 +62,7 @@ namespace HiringAutomationTool
                     writer.WriteElementString("BackColor", x.BackColor);
                     writer.WriteElementString("TextColor", x.TextColor);
                     writer.WriteElementString("TopColor", x.TopColor);
+                    writer.WriteElementString("IsActive", x.IsActive.ToString());
                     writer.WriteEndElement();
                 }
                 writer.WriteEndElement();

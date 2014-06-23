@@ -33,6 +33,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.TabControl1 = new System.Windows.Forms.TabControl();
             this.TCEmail = new System.Windows.Forms.TabPage();
+            this.button7 = new System.Windows.Forms.Button();
+            this.buttonDoLogin = new System.Windows.Forms.Button();
+            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.TCEmailTemplate = new System.Windows.Forms.TabPage();
             this.ButtonTabBrowseEmailTemplate = new System.Windows.Forms.Button();
             this.LabelSelectedTemplate = new System.Windows.Forms.Label();
@@ -43,6 +46,10 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.TCSettings = new System.Windows.Forms.TabPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.comboBoxEmails = new System.Windows.Forms.ComboBox();
+            this.textBoxErrorLogin = new System.Windows.Forms.Label();
             this.labelEmail = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonLoginReset = new System.Windows.Forms.Button();
@@ -50,6 +57,9 @@
             this.textBoxpassword = new System.Windows.Forms.TextBox();
             this.labelPassword = new System.Windows.Forms.Label();
             this.textBoxuserID = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.textBoxFolderAdress = new System.Windows.Forms.TextBox();
             this.LabelErrorMessage = new System.Windows.Forms.Label();
             this.labelColorAlert3 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
@@ -68,6 +78,9 @@
             this.radioButtonThemes = new System.Windows.Forms.RadioButton();
             this.radioButtonCustom = new System.Windows.Forms.RadioButton();
             this.TCDataFiltering = new System.Windows.Forms.TabPage();
+            this.labelProgressReport = new System.Windows.Forms.Label();
+            this.labelDetailedInformation = new System.Windows.Forms.Label();
+            this.LabelProgress = new System.Windows.Forms.Label();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.button3 = new System.Windows.Forms.Button();
@@ -81,9 +94,12 @@
             this.radioButtonRecent = new System.Windows.Forms.RadioButton();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.TabControl1.SuspendLayout();
+            this.TCEmail.SuspendLayout();
             this.TCEmailTemplate.SuspendLayout();
             this.TCSettings.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -110,7 +126,6 @@
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.AutoSize = true;
-            this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.pictureBox1);
@@ -118,7 +133,7 @@
             this.panel1.Controls.Add(this.LabelHeading);
             this.panel1.Location = new System.Drawing.Point(0, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(986, 539);
+            this.panel1.Size = new System.Drawing.Size(1222, 680);
             this.panel1.TabIndex = 1;
             // 
             // pictureBox1
@@ -134,9 +149,6 @@
             // TabControl1
             // 
             this.TabControl1.AllowDrop = true;
-            this.TabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
             this.TabControl1.Controls.Add(this.TCEmail);
             this.TabControl1.Controls.Add(this.TCEmailTemplate);
             this.TabControl1.Controls.Add(this.TCSettings);
@@ -146,20 +158,50 @@
             this.TabControl1.Name = "TabControl1";
             this.TabControl1.SelectedIndex = 0;
             this.TabControl1.ShowToolTips = true;
-            this.TabControl1.Size = new System.Drawing.Size(962, 449);
-            this.TabControl1.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
+            this.TabControl1.Size = new System.Drawing.Size(1174, 573);
             this.TabControl1.TabIndex = 1;
             // 
             // TCEmail
             // 
+            this.TCEmail.Controls.Add(this.button7);
+            this.TCEmail.Controls.Add(this.buttonDoLogin);
+            this.TCEmail.Controls.Add(this.richTextBox2);
             this.TCEmail.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.TCEmail.Location = new System.Drawing.Point(4, 22);
             this.TCEmail.Name = "TCEmail";
             this.TCEmail.Padding = new System.Windows.Forms.Padding(3);
-            this.TCEmail.Size = new System.Drawing.Size(954, 423);
+            this.TCEmail.Size = new System.Drawing.Size(1166, 547);
             this.TCEmail.TabIndex = 1;
             this.TCEmail.Text = "Email";
             this.TCEmail.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(247, 52);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(140, 66);
+            this.button7.TabIndex = 2;
+            this.button7.Text = "Open All the Links ";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // buttonDoLogin
+            // 
+            this.buttonDoLogin.Location = new System.Drawing.Point(42, 52);
+            this.buttonDoLogin.Name = "buttonDoLogin";
+            this.buttonDoLogin.Size = new System.Drawing.Size(183, 66);
+            this.buttonDoLogin.TabIndex = 1;
+            this.buttonDoLogin.Text = "Gather Links of All Folders";
+            this.buttonDoLogin.UseVisualStyleBackColor = true;
+            this.buttonDoLogin.Click += new System.EventHandler(this.buttonDoLogin_Click);
+            // 
+            // richTextBox2
+            // 
+            this.richTextBox2.Location = new System.Drawing.Point(42, 124);
+            this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.Size = new System.Drawing.Size(1106, 417);
+            this.richTextBox2.TabIndex = 0;
+            this.richTextBox2.Text = "";
             // 
             // TCEmailTemplate
             // 
@@ -174,7 +216,7 @@
             this.TCEmailTemplate.Location = new System.Drawing.Point(4, 22);
             this.TCEmailTemplate.Name = "TCEmailTemplate";
             this.TCEmailTemplate.Padding = new System.Windows.Forms.Padding(3);
-            this.TCEmailTemplate.Size = new System.Drawing.Size(954, 423);
+            this.TCEmailTemplate.Size = new System.Drawing.Size(1166, 547);
             this.TCEmailTemplate.TabIndex = 2;
             this.TCEmailTemplate.Text = "Email Template";
             this.TCEmailTemplate.UseVisualStyleBackColor = true;
@@ -248,7 +290,7 @@
             this.TCSettings.Location = new System.Drawing.Point(4, 22);
             this.TCSettings.Name = "TCSettings";
             this.TCSettings.Padding = new System.Windows.Forms.Padding(3);
-            this.TCSettings.Size = new System.Drawing.Size(954, 423);
+            this.TCSettings.Size = new System.Drawing.Size(1166, 547);
             this.TCSettings.TabIndex = 3;
             this.TCSettings.Text = "Setting";
             this.TCSettings.UseVisualStyleBackColor = true;
@@ -261,6 +303,10 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.AllowDrop = true;
+            this.splitContainer1.Panel1.Controls.Add(this.label5);
+            this.splitContainer1.Panel1.Controls.Add(this.label4);
+            this.splitContainer1.Panel1.Controls.Add(this.comboBoxEmails);
+            this.splitContainer1.Panel1.Controls.Add(this.textBoxErrorLogin);
             this.splitContainer1.Panel1.Controls.Add(this.labelEmail);
             this.splitContainer1.Panel1.Controls.Add(this.label1);
             this.splitContainer1.Panel1.Controls.Add(this.buttonLoginReset);
@@ -268,9 +314,13 @@
             this.splitContainer1.Panel1.Controls.Add(this.textBoxpassword);
             this.splitContainer1.Panel1.Controls.Add(this.labelPassword);
             this.splitContainer1.Panel1.Controls.Add(this.textBoxuserID);
+            this.splitContainer1.Panel1.ImeMode = System.Windows.Forms.ImeMode.Off;
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.label6);
+            this.splitContainer1.Panel2.Controls.Add(this.linkLabel1);
+            this.splitContainer1.Panel2.Controls.Add(this.textBoxFolderAdress);
             this.splitContainer1.Panel2.Controls.Add(this.LabelErrorMessage);
             this.splitContainer1.Panel2.Controls.Add(this.labelColorAlert3);
             this.splitContainer1.Panel2.Controls.Add(this.button6);
@@ -292,10 +342,48 @@
             this.splitContainer1.SplitterDistance = 306;
             this.splitContainer1.TabIndex = 4;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Agency FB", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(136, 149);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(108, 14);
+            this.label5.TabIndex = 22;
+            this.label5.Text = "e,g: abbas.naqvi@yahoo.com";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(45, 58);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(88, 13);
+            this.label4.TabIndex = 21;
+            this.label4.Text = "Your Email ID:";
+            // 
+            // comboBoxEmails
+            // 
+            this.comboBoxEmails.FormattingEnabled = true;
+            this.comboBoxEmails.Location = new System.Drawing.Point(139, 50);
+            this.comboBoxEmails.Name = "comboBoxEmails";
+            this.comboBoxEmails.Size = new System.Drawing.Size(164, 21);
+            this.comboBoxEmails.Sorted = true;
+            this.comboBoxEmails.TabIndex = 20;
+            this.comboBoxEmails.SelectedIndexChanged += new System.EventHandler(this.comboBoxEmails_SelectedIndexChanged);
+            // 
+            // textBoxErrorLogin
+            // 
+            this.textBoxErrorLogin.AutoSize = true;
+            this.textBoxErrorLogin.ForeColor = System.Drawing.Color.Red;
+            this.textBoxErrorLogin.Location = new System.Drawing.Point(158, 275);
+            this.textBoxErrorLogin.Name = "textBoxErrorLogin";
+            this.textBoxErrorLogin.Size = new System.Drawing.Size(0, 13);
+            this.textBoxErrorLogin.TabIndex = 19;
+            // 
             // labelEmail
             // 
             this.labelEmail.AutoSize = true;
-            this.labelEmail.Location = new System.Drawing.Point(56, 90);
+            this.labelEmail.Location = new System.Drawing.Point(60, 133);
             this.labelEmail.Name = "labelEmail";
             this.labelEmail.Size = new System.Drawing.Size(37, 13);
             this.labelEmail.TabIndex = 7;
@@ -304,15 +392,16 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(85, 27);
+            this.label1.Font = new System.Drawing.Font("Modern No. 20", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(107, 87);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 13);
+            this.label1.Size = new System.Drawing.Size(99, 29);
             this.label1.TabIndex = 6;
             this.label1.Text = "Profile";
             // 
             // buttonLoginReset
             // 
-            this.buttonLoginReset.Location = new System.Drawing.Point(156, 180);
+            this.buttonLoginReset.Location = new System.Drawing.Point(151, 216);
             this.buttonLoginReset.Name = "buttonLoginReset";
             this.buttonLoginReset.Size = new System.Drawing.Size(75, 23);
             this.buttonLoginReset.TabIndex = 5;
@@ -322,7 +411,7 @@
             // 
             // buttonLoginSave
             // 
-            this.buttonLoginSave.Location = new System.Drawing.Point(59, 180);
+            this.buttonLoginSave.Location = new System.Drawing.Point(70, 216);
             this.buttonLoginSave.Name = "buttonLoginSave";
             this.buttonLoginSave.Size = new System.Drawing.Size(75, 23);
             this.buttonLoginSave.TabIndex = 4;
@@ -332,16 +421,17 @@
             // 
             // textBoxpassword
             // 
-            this.textBoxpassword.Location = new System.Drawing.Point(147, 122);
+            this.textBoxpassword.Location = new System.Drawing.Point(139, 172);
             this.textBoxpassword.Name = "textBoxpassword";
             this.textBoxpassword.Size = new System.Drawing.Size(100, 20);
             this.textBoxpassword.TabIndex = 3;
             this.textBoxpassword.UseSystemPasswordChar = true;
+            this.textBoxpassword.TextChanged += new System.EventHandler(this.textBoxpassword_TextChanged);
             // 
             // labelPassword
             // 
             this.labelPassword.AutoSize = true;
-            this.labelPassword.Location = new System.Drawing.Point(56, 129);
+            this.labelPassword.Location = new System.Drawing.Point(60, 180);
             this.labelPassword.Name = "labelPassword";
             this.labelPassword.Size = new System.Drawing.Size(61, 13);
             this.labelPassword.TabIndex = 1;
@@ -349,10 +439,39 @@
             // 
             // textBoxuserID
             // 
-            this.textBoxuserID.Location = new System.Drawing.Point(147, 83);
+            this.textBoxuserID.Location = new System.Drawing.Point(139, 126);
             this.textBoxuserID.Name = "textBoxuserID";
             this.textBoxuserID.Size = new System.Drawing.Size(100, 20);
             this.textBoxuserID.TabIndex = 2;
+            this.textBoxuserID.TabIndexChanged += new System.EventHandler(this.textBoxuserID_TabIndexChanged);
+            this.textBoxuserID.TextChanged += new System.EventHandler(this.textBoxuserID_TextChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(10, 20);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(95, 13);
+            this.label6.TabIndex = 21;
+            this.label6.Text = "Selected Path: ";
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(475, 23);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(92, 13);
+            this.linkLabel1.TabIndex = 20;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Select location";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // textBoxFolderAdress
+            // 
+            this.textBoxFolderAdress.Location = new System.Drawing.Point(105, 17);
+            this.textBoxFolderAdress.Name = "textBoxFolderAdress";
+            this.textBoxFolderAdress.Size = new System.Drawing.Size(363, 20);
+            this.textBoxFolderAdress.TabIndex = 19;
             // 
             // LabelErrorMessage
             // 
@@ -360,9 +479,8 @@
             this.LabelErrorMessage.ForeColor = System.Drawing.Color.Red;
             this.LabelErrorMessage.Location = new System.Drawing.Point(288, 237);
             this.LabelErrorMessage.Name = "LabelErrorMessage";
-            this.LabelErrorMessage.Size = new System.Drawing.Size(88, 13);
+            this.LabelErrorMessage.Size = new System.Drawing.Size(0, 13);
             this.LabelErrorMessage.TabIndex = 18;
-            this.LabelErrorMessage.Text = "Error Message";
             // 
             // labelColorAlert3
             // 
@@ -492,9 +610,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(115, 27);
+            this.label2.Font = new System.Drawing.Font("Modern No. 20", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(8, 46);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 13);
+            this.label2.Size = new System.Drawing.Size(175, 29);
             this.label2.TabIndex = 2;
             this.label2.Text = "Color Scheme";
             // 
@@ -525,6 +644,9 @@
             // TCDataFiltering
             // 
             this.TCDataFiltering.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.TCDataFiltering.Controls.Add(this.labelProgressReport);
+            this.TCDataFiltering.Controls.Add(this.labelDetailedInformation);
+            this.TCDataFiltering.Controls.Add(this.LabelProgress);
             this.TCDataFiltering.Controls.Add(this.progressBar1);
             this.TCDataFiltering.Controls.Add(this.webBrowser1);
             this.TCDataFiltering.Controls.Add(this.button3);
@@ -540,16 +662,43 @@
             this.TCDataFiltering.Location = new System.Drawing.Point(4, 22);
             this.TCDataFiltering.Name = "TCDataFiltering";
             this.TCDataFiltering.Padding = new System.Windows.Forms.Padding(3);
-            this.TCDataFiltering.Size = new System.Drawing.Size(954, 423);
+            this.TCDataFiltering.Size = new System.Drawing.Size(1166, 547);
             this.TCDataFiltering.TabIndex = 0;
             this.TCDataFiltering.Text = "Data Filtering";
             this.TCDataFiltering.UseVisualStyleBackColor = true;
+            // 
+            // labelProgressReport
+            // 
+            this.labelProgressReport.AutoSize = true;
+            this.labelProgressReport.Location = new System.Drawing.Point(735, 147);
+            this.labelProgressReport.Name = "labelProgressReport";
+            this.labelProgressReport.Size = new System.Drawing.Size(19, 13);
+            this.labelProgressReport.TabIndex = 17;
+            this.labelProgressReport.Text = "...";
+            // 
+            // labelDetailedInformation
+            // 
+            this.labelDetailedInformation.AutoSize = true;
+            this.labelDetailedInformation.Location = new System.Drawing.Point(24, 147);
+            this.labelDetailedInformation.Name = "labelDetailedInformation";
+            this.labelDetailedInformation.Size = new System.Drawing.Size(19, 13);
+            this.labelDetailedInformation.TabIndex = 16;
+            this.labelDetailedInformation.Text = "...";
+            // 
+            // LabelProgress
+            // 
+            this.LabelProgress.AutoSize = true;
+            this.LabelProgress.Location = new System.Drawing.Point(24, 134);
+            this.LabelProgress.Name = "LabelProgress";
+            this.LabelProgress.Size = new System.Drawing.Size(19, 13);
+            this.LabelProgress.TabIndex = 14;
+            this.LabelProgress.Text = "...";
             // 
             // progressBar1
             // 
             this.progressBar1.Location = new System.Drawing.Point(15, 94);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(929, 36);
+            this.progressBar1.Size = new System.Drawing.Size(1121, 37);
             this.progressBar1.TabIndex = 13;
             // 
             // webBrowser1
@@ -557,15 +706,16 @@
             this.webBrowser1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.webBrowser1.Location = new System.Drawing.Point(111, 136);
+            this.webBrowser1.Location = new System.Drawing.Point(139, 219);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(833, 272);
+            this.webBrowser1.Size = new System.Drawing.Size(1006, 304);
             this.webBrowser1.TabIndex = 12;
+            this.webBrowser1.Url = new System.Uri("http://www.rozee.pk", System.UriKind.Absolute);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(6, 234);
+            this.button3.Location = new System.Drawing.Point(5, 311);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(99, 88);
             this.button3.TabIndex = 11;
@@ -574,16 +724,17 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(6, 319);
+            this.button2.Location = new System.Drawing.Point(5, 405);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(99, 89);
             this.button2.TabIndex = 10;
             this.button2.Text = "Stop";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(6, 153);
+            this.button1.Location = new System.Drawing.Point(6, 219);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(99, 86);
             this.button1.TabIndex = 9;
@@ -630,7 +781,6 @@
             this.radioButtonSpecificDate.Name = "radioButtonSpecificDate";
             this.radioButtonSpecificDate.Size = new System.Drawing.Size(102, 17);
             this.radioButtonSpecificDate.TabIndex = 4;
-            this.radioButtonSpecificDate.TabStop = true;
             this.radioButtonSpecificDate.Text = "Specific Date";
             this.radioButtonSpecificDate.UseVisualStyleBackColor = true;
             this.radioButtonSpecificDate.CheckedChanged += new System.EventHandler(this.radioButtonSpecificDate_CheckedChanged);
@@ -638,6 +788,7 @@
             // radioButtonRecent
             // 
             this.radioButtonRecent.AutoSize = true;
+            this.radioButtonRecent.Checked = true;
             this.radioButtonRecent.Location = new System.Drawing.Point(38, 19);
             this.radioButtonRecent.Name = "radioButtonRecent";
             this.radioButtonRecent.Size = new System.Drawing.Size(66, 17);
@@ -656,24 +807,29 @@
             this.colorDialog1.ShowHelp = true;
             this.colorDialog1.SolidColorOnly = true;
             // 
+            // backgroundWorker1
+            // 
+            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
-            this.ClientSize = new System.Drawing.Size(995, 550);
+            this.ClientSize = new System.Drawing.Size(1236, 683);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.HelpButton = true;
             this.Name = "Form1";
-            this.Text = "HAT (Prototype)";
+            this.Text = "HAT (Phase1-Testing)";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.TabControl1.ResumeLayout(false);
+            this.TCEmail.ResumeLayout(false);
             this.TCEmailTemplate.ResumeLayout(false);
             this.TCEmailTemplate.PerformLayout();
             this.TCSettings.ResumeLayout(false);
@@ -745,6 +901,21 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label labelTopColor;
         private System.Windows.Forms.Label LabelErrorMessage;
+        private System.Windows.Forms.Label textBoxErrorLogin;
+        private System.Windows.Forms.Button buttonDoLogin;
+        private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.Button button7;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Label LabelProgress;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox comboBoxEmails;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.TextBox textBoxFolderAdress;
+        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label labelDetailedInformation;
+        private System.Windows.Forms.Label labelProgressReport;
     }
 }
 
