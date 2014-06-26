@@ -149,8 +149,7 @@ namespace HiringAutomationTool
                     string FileType1 = System.IO.Path.Combine(path + @"\" + i.FolderName + @"\" + i.CVNumber + ".pdf");
                     string FileType2 = System.IO.Path.Combine(path + @"\" + i.FolderName + @"\" + i.CVNumber + ".doc");
                     string FileType3 = System.IO.Path.Combine(path + @"\" + i.FolderName + @"\" + i.CVNumber + ".docx");
-                    string FileType4 = null;
-                    string FileType5 = null;
+           
 
 
 

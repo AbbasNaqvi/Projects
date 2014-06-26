@@ -201,7 +201,7 @@ namespace HiringAutomationTool
             }
             else
             {
-
+                notifyIcon1.ShowBalloonTip(100, "Download Completed", "All CV's are Downloaded", new ToolTipIcon());
                 labelProgressReport.Text = "Congratulations! Downloading is completed" + e.Result;
                 progressBar1.Value = 100;
             }
@@ -529,9 +529,6 @@ namespace HiringAutomationTool
                 loginEmail = comboBoxEmails.Text;
                 password = profilelog.FindPasswordofThisEmail(loginEmail);
 
-
-
-                // x = w.Login("abbas.naqvi@dynamologic.com", "Disneyjob");
                 x = w.Login(loginEmail, password);
 
             }
@@ -553,7 +550,7 @@ namespace HiringAutomationTool
                 e.Cancel = true;
                 return;
             } backgroundWorker1.ReportProgress(1);
-       //    w.DownloadAllPostedJobs(Date1, Date2, radioButtonSpecificDate.Checked);
+           w.DownloadAllPostedJobs(Date1, Date2, radioButtonSpecificDate.Checked);
             if (backgroundWorker1.CancellationPending == true)
             {
                 e.Cancel = true;
@@ -572,7 +569,7 @@ namespace HiringAutomationTool
                 e.Cancel = true;
                 return;
             }
-           // w.OpenAllLinks(Date1, Date2, radioButtonSpecificDate.Checked);
+            w.OpenAllLinks(Date1, Date2, radioButtonSpecificDate.Checked);
             backgroundWorker1.ReportProgress(12);
             if (backgroundWorker1.CancellationPending == true)
             {
@@ -581,7 +578,7 @@ namespace HiringAutomationTool
             }
             try
             {
-         //       handler.WriteTheApplicantLists(System.IO.Path.Combine(RelativePath));
+                handler.WriteTheApplicantLists(System.IO.Path.Combine(RelativePath));
             }
             catch (Exception eX)
             {
@@ -595,7 +592,7 @@ namespace HiringAutomationTool
                 return;
             }
 
-          //  x = handler.WriteFolderApplicantLists(RelativePath);
+            x = handler.WriteFolderApplicantLists(RelativePath);
             if (String.IsNullOrEmpty(x) == false)
             {
                 MessageBox.Show(x);

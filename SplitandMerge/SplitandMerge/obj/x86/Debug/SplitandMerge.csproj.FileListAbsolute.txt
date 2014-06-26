@@ -1,0 +1,8 @@
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\SplitandMerge\SplitandMerge\bin\Debug\SplitandMerge.exe
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\SplitandMerge\SplitandMerge\obj\x86\Debug\SplitandMerge.csproj.ResolveComReference.cache
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\SplitandMerge\SplitandMerge\bin\Debug\SplitandMerge.pdb
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\SplitandMerge\SplitandMerge\obj\x86\Debug\SplitandMerge.Form1.resources
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\SplitandMerge\SplitandMerge\obj\x86\Debug\SplitandMerge.Properties.Resources.resources
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\SplitandMerge\SplitandMerge\obj\x86\Debug\SplitandMerge.csproj.GenerateResource.Cache
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\SplitandMerge\SplitandMerge\obj\x86\Debug\SplitandMerge.exe
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\SplitandMerge\SplitandMerge\obj\x86\Debug\SplitandMerge.pdb

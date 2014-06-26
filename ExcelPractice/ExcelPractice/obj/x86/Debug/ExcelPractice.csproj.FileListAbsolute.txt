@@ -1,0 +1,5 @@
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ExcelPractice\ExcelPractice\obj\x86\Debug\ExcelPractice.csproj.ResolveComReference.cache
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ExcelPractice\ExcelPractice\bin\Debug\ExcelPractice.exe
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ExcelPractice\ExcelPractice\bin\Debug\ExcelPractice.pdb
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ExcelPractice\ExcelPractice\obj\x86\Debug\ExcelPractice.exe
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ExcelPractice\ExcelPractice\obj\x86\Debug\ExcelPractice.pdb
