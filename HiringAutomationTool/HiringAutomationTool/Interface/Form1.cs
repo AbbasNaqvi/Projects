@@ -197,6 +197,11 @@ namespace HiringAutomationTool
             {
                 labelProgressReport.Text = "Downloaded have Terminated Successfully";
                 progressBar1.Value = 0;
+                notifyIcon1.BalloonTipIcon = ToolTipIcon.Info;
+                notifyIcon1.BalloonTipTitle = "Terminated Successfully";
+                notifyIcon1.BalloonTipText = "All downloading is terminated ";
+                notifyIcon1.ShowBalloonTip(1000);
+                InitializeComponent();
 
             }
             else
@@ -204,6 +209,11 @@ namespace HiringAutomationTool
                 notifyIcon1.ShowBalloonTip(100, "Download Completed", "All CV's are Downloaded", new ToolTipIcon());
                 labelProgressReport.Text = "Congratulations! Downloading is completed" + e.Result;
                 progressBar1.Value = 100;
+                notifyIcon1.BalloonTipIcon = ToolTipIcon.Info;
+                notifyIcon1.BalloonTipTitle = "Download Completed";
+                notifyIcon1.BalloonTipText = "Congratulations! Downloading CV's is successfully completed\n ";
+                notifyIcon1.ShowBalloonTip(1000);
+                InitializeComponent();
             }
             button1.Enabled = true;
             button2.Enabled = false;
@@ -532,9 +542,12 @@ namespace HiringAutomationTool
                 x = w.Login(loginEmail, password);
 
             }
-            catch (System.Net.WebException a)
+            catch (System.Net.WebException)
             {
-                MessageBox.Show("Please connect to internet in order to download CV's\n\nDetails:\n " + a.Message);
+                notifyIcon1.BalloonTipIcon = ToolTipIcon.Error;
+                notifyIcon1.BalloonTipTitle = "Connection Error";
+                notifyIcon1.BalloonTipText = "Please connect to internet in order to download CV's\n ";
+                notifyIcon1.ShowBalloonTip(1000);
                 e.Cancel = true;
                 return;
             }
@@ -618,17 +631,13 @@ namespace HiringAutomationTool
         }
         void w_InformationDownloadEvent(object o, EventArguments e)
         {
-
-            /*  labelDetailedInformation.Invoke((MethodInvoker)delegate
-              {*/
             labelDetailedInformation.Text = e.Name + " " + e.Details + " at " + e.Date.ToLocalTime(); // runs on UI thread
-            /* });*/
         }
 
 
         private void button2_Click(object sender, EventArgs e)
         {
-            labelProgressReport.Text = "wait ..The process is not yet terminated";
+            labelProgressReport.Text = "Wait ..The process is not yet terminated";
             backgroundWorker1.CancelAsync();
             button2.Enabled = false;
             button3.Enabled = false;

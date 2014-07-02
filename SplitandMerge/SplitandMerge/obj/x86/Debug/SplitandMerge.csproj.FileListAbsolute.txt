@@ -6,3 +6,4 @@ C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\SplitandMerg
 C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\SplitandMerge\SplitandMerge\obj\x86\Debug\SplitandMerge.csproj.GenerateResource.Cache
 C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\SplitandMerge\SplitandMerge\obj\x86\Debug\SplitandMerge.exe
 C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\SplitandMerge\SplitandMerge\obj\x86\Debug\SplitandMerge.pdb
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\SplitandMerge\SplitandMerge\bin\Debug\SplitandMerge.exe.config

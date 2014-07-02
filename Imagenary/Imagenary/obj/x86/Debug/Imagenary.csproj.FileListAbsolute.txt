@@ -1,0 +1,14 @@
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\Imagenary\Imagenary\bin\Debug\Imagenary.exe
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\Imagenary\Imagenary\bin\Debug\Imagenary.pdb
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\Imagenary\Imagenary\bin\Debug\BadPanel.dll
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\Imagenary\Imagenary\bin\Debug\GMap.NET.Core.dll
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\Imagenary\Imagenary\bin\Debug\GMap.NET.WindowsForms.dll
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\Imagenary\Imagenary\bin\Debug\BadPanel.pdb
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\Imagenary\Imagenary\bin\Debug\GMap.NET.Core.xml
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\Imagenary\Imagenary\bin\Debug\GMap.NET.WindowsForms.xml
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\Imagenary\Imagenary\obj\x86\Debug\Imagenary.Form1.resources
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\Imagenary\Imagenary\obj\x86\Debug\Imagenary.Properties.Resources.resources
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\Imagenary\Imagenary\obj\x86\Debug\Imagenary.csproj.GenerateResource.Cache
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\Imagenary\Imagenary\obj\x86\Debug\Imagenary.exe
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\Imagenary\Imagenary\obj\x86\Debug\Imagenary.pdb
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\Imagenary\Imagenary\obj\x86\Debug\Imagenary.csprojResolveAssemblyReference.cache

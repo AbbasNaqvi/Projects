@@ -65,7 +65,7 @@ namespace SplitandMerge.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap afd_110492 {
             get {
-                object obj = ResourceManager.GetObject("afd-110492", resourceCulture);
+                object obj = ResourceManager.GetObject("afd_110492", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

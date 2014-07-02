@@ -1,0 +1,6 @@
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\BadPanel\BadPanel\bin\Debug\BadPanel.dll
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\BadPanel\BadPanel\bin\Debug\BadPanel.pdb
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\BadPanel\BadPanel\obj\Debug\BadPanel.BadPanel.resources
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\BadPanel\BadPanel\obj\Debug\BadControls.csproj.GenerateResource.Cache
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\BadPanel\BadPanel\obj\Debug\BadPanel.dll
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\BadPanel\BadPanel\obj\Debug\BadPanel.pdb

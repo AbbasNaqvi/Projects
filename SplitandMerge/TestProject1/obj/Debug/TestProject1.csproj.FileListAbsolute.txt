@@ -1,0 +1,7 @@
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\SplitandMerge\TestProject1\bin\Debug\TestProject1.dll
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\SplitandMerge\TestProject1\bin\Debug\TestProject1.pdb
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\SplitandMerge\TestProject1\bin\Debug\SplitandMerge.exe
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\SplitandMerge\TestProject1\bin\Debug\SplitandMerge.pdb
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\SplitandMerge\TestProject1\obj\Debug\TestProject1.csprojResolveAssemblyReference.cache
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\SplitandMerge\TestProject1\obj\Debug\TestProject1.dll
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\SplitandMerge\TestProject1\obj\Debug\TestProject1.pdb

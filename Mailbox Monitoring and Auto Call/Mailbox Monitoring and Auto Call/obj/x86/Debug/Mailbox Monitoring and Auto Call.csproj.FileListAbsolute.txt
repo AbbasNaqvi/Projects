@@ -1,0 +1,4 @@
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\Mailbox Monitoring and Auto Call\Mailbox Monitoring and Auto Call\bin\Debug\Mailbox Monitoring and Auto Call.exe
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\Mailbox Monitoring and Auto Call\Mailbox Monitoring and Auto Call\bin\Debug\Mailbox Monitoring and Auto Call.pdb
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\Mailbox Monitoring and Auto Call\Mailbox Monitoring and Auto Call\obj\x86\Debug\Mailbox Monitoring and Auto Call.exe
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\Mailbox Monitoring and Auto Call\Mailbox Monitoring and Auto Call\obj\x86\Debug\Mailbox Monitoring and Auto Call.pdb

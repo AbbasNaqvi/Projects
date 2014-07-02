@@ -1,0 +1,7 @@
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\MMAC\MMAC\bin\Debug\MMAC.exe
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\MMAC\MMAC\obj\x86\Debug\MMAC.Form1.resources
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\MMAC\MMAC\obj\x86\Debug\MMAC.Properties.Resources.resources
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\MMAC\MMAC\obj\x86\Debug\MMAC.csproj.GenerateResource.Cache
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\MMAC\MMAC\obj\x86\Debug\MMAC.exe
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\MMAC\MMAC\obj\x86\Debug\MMAC.pdb
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\MMAC\MMAC\bin\Debug\MMAC.pdb
