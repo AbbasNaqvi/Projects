@@ -831,7 +831,7 @@
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.HelpButton = true;
             this.Name = "Form1";
-            this.Text = "HAT (Phase1-Testing)";
+            this.Text = "HAT (final version)";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.panel1.ResumeLayout(false);

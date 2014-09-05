@@ -5,3 +5,4 @@ C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\HiringAutoma
 C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\HiringAutomationTool\HiringAutomationTool\obj\x86\Debug\HiringAutomationTool.csproj.GenerateResource.Cache
 C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\HiringAutomationTool\HiringAutomationTool\obj\x86\Debug\HiringAutomationTool.exe
 C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\HiringAutomationTool\HiringAutomationTool\obj\x86\Debug\HiringAutomationTool.pdb
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\HiringAutomationTool\HiringAutomationTool\obj\x86\Debug\HiringAutomationTool.csprojResolveAssemblyReference.cache

@@ -9,6 +9,15 @@ using System.Reflection;
 using System.Windows.Forms;
 using System.Net.Mail;
 
+/*
+ * 
+ * Author :Abbas Shah
+ * Last modification="handled "
+ * 
+ * 
+ */ 
+
+
 namespace HiringAutomationTool
 {
     public partial class Form1 : Form
@@ -26,7 +35,12 @@ namespace HiringAutomationTool
             InitializeComponent();
 
 
-            Form1.CheckForIllegalCrossThreadCalls = false;
+
+            /*                Commenting out This Dangerous Code
+             * 
+             *  Form1.CheckForIllegalCrossThreadCalls = false;
+             */
+
             textBoxFolderAdress.Text = "D:\\";
             RelativePath = textBoxFolderAdress.Text;
             w = new DynamoWebClient(RelativePath);
@@ -135,7 +149,7 @@ namespace HiringAutomationTool
             radioButtonRecent.Enabled = false;
             dateTimePicker1.Enabled = false;
             dateTimePicker2.Enabled = false;
-
+            backgroundWorker1.DoWork+=new DoWorkEventHandler(backgroundWorker1_DoWork);
             backgroundWorker1.RunWorkerCompleted += new RunWorkerCompletedEventHandler(backgroundWorker1_RunWorkerCompleted);
             backgroundWorker1.ProgressChanged += new ProgressChangedEventHandler(backgroundWorker1_ProgressChanged);
             if (backgroundWorker1.IsBusy == false)
@@ -496,6 +510,20 @@ namespace HiringAutomationTool
         {
 
         }
+
+        public delegate void ControlStringConsumer(Control control, string text);  // defines a delegate type
+
+        public void SetText(Control control, string text)
+        {
+            if (control.InvokeRequired)
+            {
+                control.Invoke(new ControlStringConsumer(SetText), new object[] { control, text });  // invoking itself
+            }
+            else
+            {
+                control.Text = text;      // the "functional part", executing only on the main thread
+            }
+        }
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
             try
@@ -536,7 +564,14 @@ namespace HiringAutomationTool
             {
                 string password = null;
                 string loginEmail = null;
-                loginEmail = comboBoxEmails.Text;
+                if (comboBoxEmails.InvokeRequired)
+                {
+                    comboBoxEmails.Invoke(new Action(() =>loginEmail=comboBoxEmails.Text));
+//                    comboBoxEmails.Invoke(new ControlStringConsumer(SetText), new object[] {comboBoxEmails, "" });
+                }
+                else {
+                    loginEmail = comboBoxEmails.Text;
+                }
                 password = profilelog.FindPasswordofThisEmail(loginEmail);
 
                 x = w.Login(loginEmail, password);
@@ -631,7 +666,14 @@ namespace HiringAutomationTool
         }
         void w_InformationDownloadEvent(object o, EventArguments e)
         {
-            labelDetailedInformation.Text = e.Name + " " + e.Details + " at " + e.Date.ToLocalTime(); // runs on UI thread
+            if (labelDetailedInformation.InvokeRequired)
+            {
+                labelDetailedInformation.Invoke(new Action(() => labelDetailedInformation.Text = e.Name + " " + e.Details + " at " + e.Date.ToLocalTime()));
+            }
+            else
+            {
+                labelDetailedInformation.Text = e.Name + " " + e.Details + " at " + e.Date.ToLocalTime(); // runs on UI thread
+            }
         }
 
 
@@ -654,8 +696,6 @@ namespace HiringAutomationTool
             folderBrowserDialog1.ShowDialog();
             textBoxFolderAdress.Text = folderBrowserDialog1.SelectedPath;
         }
-
-
 
 
     }

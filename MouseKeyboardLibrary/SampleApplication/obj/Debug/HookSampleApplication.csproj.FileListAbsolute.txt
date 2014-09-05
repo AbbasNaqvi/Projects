@@ -1,0 +1,10 @@
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\MouseKeyboardLibrary\SampleApplication\bin\Debug\SampleApplication.exe
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\MouseKeyboardLibrary\SampleApplication\bin\Debug\SampleApplication.pdb
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\MouseKeyboardLibrary\SampleApplication\bin\Debug\MouseKeyboardLibrary.dll
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\MouseKeyboardLibrary\SampleApplication\bin\Debug\MouseKeyboardLibrary.pdb
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\MouseKeyboardLibrary\SampleApplication\obj\Debug\HookSampleApplication.csprojResolveAssemblyReference.cache
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\MouseKeyboardLibrary\SampleApplication\obj\Debug\SampleApplication.Properties.Resources.resources
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\MouseKeyboardLibrary\SampleApplication\obj\Debug\SampleApplication.HookTestForm.resources
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\MouseKeyboardLibrary\SampleApplication\obj\Debug\HookSampleApplication.csproj.GenerateResource.Cache
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\MouseKeyboardLibrary\SampleApplication\obj\Debug\SampleApplication.exe
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\MouseKeyboardLibrary\SampleApplication\obj\Debug\SampleApplication.pdb

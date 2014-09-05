@@ -1,0 +1,4 @@
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\MouseKeyboardLibrary\MouseKeyboardLibrary\bin\Debug\MouseKeyboardLibrary.dll
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\MouseKeyboardLibrary\MouseKeyboardLibrary\bin\Debug\MouseKeyboardLibrary.pdb
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\MouseKeyboardLibrary\MouseKeyboardLibrary\obj\Debug\MouseKeyboardLibrary.dll
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\MouseKeyboardLibrary\MouseKeyboardLibrary\obj\Debug\MouseKeyboardLibrary.pdb

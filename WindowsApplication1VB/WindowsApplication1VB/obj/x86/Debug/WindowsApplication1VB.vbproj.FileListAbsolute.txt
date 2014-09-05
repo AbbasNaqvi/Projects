@@ -1,0 +1,9 @@
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\WindowsApplication1VB\WindowsApplication1VB\bin\Debug\WindowsApplication1VB.exe
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\WindowsApplication1VB\WindowsApplication1VB\bin\Debug\WindowsApplication1VB.pdb
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\WindowsApplication1VB\WindowsApplication1VB\bin\Debug\WindowsApplication1VB.xml
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\WindowsApplication1VB\WindowsApplication1VB\obj\x86\Debug\WindowsApplication1VB.Form1.resources
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\WindowsApplication1VB\WindowsApplication1VB\obj\x86\Debug\WindowsApplication1VB.Resources.resources
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\WindowsApplication1VB\WindowsApplication1VB\obj\x86\Debug\WindowsApplication1VB.vbproj.GenerateResource.Cache
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\WindowsApplication1VB\WindowsApplication1VB\obj\x86\Debug\WindowsApplication1VB.exe
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\WindowsApplication1VB\WindowsApplication1VB\obj\x86\Debug\WindowsApplication1VB.xml
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\WindowsApplication1VB\WindowsApplication1VB\obj\x86\Debug\WindowsApplication1VB.pdb

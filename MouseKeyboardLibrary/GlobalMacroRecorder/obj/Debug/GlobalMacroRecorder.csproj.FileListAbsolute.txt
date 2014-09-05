@@ -1,0 +1,10 @@
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\MouseKeyboardLibrary\GlobalMacroRecorder\bin\Debug\GlobalMacroRecorder.exe
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\MouseKeyboardLibrary\GlobalMacroRecorder\bin\Debug\GlobalMacroRecorder.pdb
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\MouseKeyboardLibrary\GlobalMacroRecorder\bin\Debug\MouseKeyboardLibrary.dll
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\MouseKeyboardLibrary\GlobalMacroRecorder\bin\Debug\MouseKeyboardLibrary.pdb
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\MouseKeyboardLibrary\GlobalMacroRecorder\obj\Debug\GlobalMacroRecorder.csprojResolveAssemblyReference.cache
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\MouseKeyboardLibrary\GlobalMacroRecorder\obj\Debug\GlobalMacroRecorder.MacroForm.resources
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\MouseKeyboardLibrary\GlobalMacroRecorder\obj\Debug\GlobalMacroRecorder.Properties.Resources.resources
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\MouseKeyboardLibrary\GlobalMacroRecorder\obj\Debug\GlobalMacroRecorder.csproj.GenerateResource.Cache
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\MouseKeyboardLibrary\GlobalMacroRecorder\obj\Debug\GlobalMacroRecorder.exe
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\MouseKeyboardLibrary\GlobalMacroRecorder\obj\Debug\GlobalMacroRecorder.pdb

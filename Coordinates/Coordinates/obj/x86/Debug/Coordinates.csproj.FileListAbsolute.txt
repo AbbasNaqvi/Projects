@@ -1,0 +1,8 @@
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\Coordinates\Coordinates\bin\Debug\Coordinates.exe
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\Coordinates\Coordinates\bin\Debug\Coordinates.pdb
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\Coordinates\Coordinates\obj\x86\Debug\Coordinates.Form1.resources
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\Coordinates\Coordinates\obj\x86\Debug\Coordinates.Properties.Resources.resources
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\Coordinates\Coordinates\obj\x86\Debug\Coordinates.csproj.GenerateResource.Cache
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\Coordinates\Coordinates\obj\x86\Debug\Coordinates.exe
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\Coordinates\Coordinates\obj\x86\Debug\Coordinates.pdb
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\Coordinates\Coordinates\obj\x86\Debug\Coordinates.csprojResolveAssemblyReference.cache

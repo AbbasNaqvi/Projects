@@ -1,0 +1,15 @@
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\Imagenary\TestProject1\bin\Debug\Resources\2.ico
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\Imagenary\TestProject1\bin\Debug\TestProject1.dll
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\Imagenary\TestProject1\bin\Debug\TestProject1.pdb
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\Imagenary\TestProject1\bin\Debug\BadPanel.dll
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\Imagenary\TestProject1\bin\Debug\GMap.NET.Core.dll
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\Imagenary\TestProject1\bin\Debug\GMap.NET.WindowsForms.dll
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\Imagenary\TestProject1\bin\Debug\Imagenary.exe
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\Imagenary\TestProject1\bin\Debug\WindowsFormsControlLibrary1.dll
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\Imagenary\TestProject1\bin\Debug\Imagenary.pdb
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\Imagenary\TestProject1\bin\Debug\BadPanel.pdb
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\Imagenary\TestProject1\bin\Debug\GMap.NET.Core.xml
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\Imagenary\TestProject1\bin\Debug\GMap.NET.WindowsForms.xml
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\Imagenary\TestProject1\obj\Debug\TestProject1.csprojResolveAssemblyReference.cache
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\Imagenary\TestProject1\obj\Debug\TestProject1.dll
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\Imagenary\TestProject1\obj\Debug\TestProject1.pdb
