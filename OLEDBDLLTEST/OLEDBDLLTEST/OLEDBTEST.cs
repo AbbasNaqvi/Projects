@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Imagenary
+namespace OLEDBDLLTEST
 {
     public partial class OLEDBTEST : Form
     {
@@ -43,7 +43,7 @@ namespace Imagenary
             OpenFileDialog dialog = new OpenFileDialog();
             dialog.ShowDialog();
             textBox14.Text = dialog.FileName;
-            
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -56,6 +56,11 @@ namespace Imagenary
                 richTextBox1.Text += p.FullAddress + " , " + p.SuccessURL + "\n";
             }
             richTextBox1.Text += handler.OLEDBLog;
+        }
+
+        private void OLEDBTEST_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

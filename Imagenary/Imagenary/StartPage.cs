@@ -100,9 +100,14 @@ namespace Imagenary
             //ConsoleText+=this.DownloadAllImages(this);
             //this.Show();
             //richTextBox1.Text = ConsoleText;
-
+            string ConsoleText = null;
             backgroundWorker2.RunWorkerAsync();
-      
+            PropertyFinder finder = new PropertyFinder();
+          //  ConsoleText += this.DownloadAllImages(this);
+              ConsoleText +=  finder.DownloadAllImages(this);
+            //  this.Show();
+               SetRichboxText(ConsoleText);
+            SetRichboxText("\n\n\n");
         }
         internal string DownloadAllImages(StartPage startPage)
         {
@@ -269,29 +274,26 @@ namespace Imagenary
         {
             PropertyFinder finder = new PropertyFinder();
             finder.InformationDownloadEvent += new InformationDownloadHandler(finder_InformationDownloadEvent);
+            
             icon.BalloonTipText = "STARTED";
             icon.ShowBalloonTip(5 * 60 * 1000);
             string ConsoleText = null;
             if (String.IsNullOrEmpty(textBox1.Text) == false)
             {
                 ////            D:\\Week185_SampleFile_Z5.xlsx
-                OledbHandler Excelhandler = new OledbHandler(textBox1.Text);
+                OledbHandler Excelhandler = new OledbHandler(textBox1.Text,null);
                 ConsoleText = Excelhandler.ReadExcelFileSingle(textBox1.Text.Trim(), "No Addresses Found$", "POSTCODE");
             }
             SetRichboxText(ConsoleText);
             SetRichboxText("\n\n\n");
 
             SetLabelText("Start time=" + DateTime.Now);
-            ConsoleText = finder.FindMultipleProperties();
+        //    ConsoleText = finder.FindMultipleProperties();
             SetRichboxText(ConsoleText);
             SetRichboxText("\n\n\n");
             SetLabelText("Read PAF FILE");
            // this.Hide();
-         //   ConsoleText += this.DownloadAllImages(this);
-            ConsoleText +=  finder.DownloadAllImages(this);
-            //  this.Show();
-         //   SetRichboxText(ConsoleText);
-            SetRichboxText("\n\n\n");
+         
         }
 
         private void button1_Click(object sender, EventArgs e)

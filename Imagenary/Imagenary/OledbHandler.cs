@@ -11,23 +11,44 @@ namespace Imagenary
 {
     class OledbHandler
     {
-        DataSet ds = new DataSet();
-        OleDbCommand cmd;
-        DataTable dt = new DataTable();
-        OleDbDataAdapter da = null;
-        string FileName;
+      DataSet ds = new DataSet();
+      private OleDbCommand cmd;
+      private DataTable dt = new DataTable();
+      private OleDbDataAdapter da = null;
+      private string FileName;
+      private string TableName;
 
         PropertyLog PropertiesObj = PropertyLog.Create;
         PostalAdressLog PostalAdressObj = PostalAdressLog.Create;
+        private string oLEDBLog;
 
-
-        public OledbHandler(string filename)
+        public string OLEDBLog
+        {
+            get { return oLEDBLog; }
+            set { oLEDBLog = value; }
+        }
+        
+        /*
+         * If Table name is same as FileName ,Second argument can be null
+         * 
+         */ 
+        public OledbHandler(string filename,string tablename)
         {
             FileName = filename;
-        
+            if (string.IsNullOrEmpty(tablename))
+            {
+                TableName = filename;
+
+            }
+            else {
+                TableName = tablename;            
+            }
         }
 
-
+        /*
+         * Method takes filename and Returns ConnectionString
+         * More ConnectionStrings can be added or changed for required application version
+         */ 
         private string GetConnectionString(string fileName)
         {
             string connectionString = null;
@@ -38,10 +59,7 @@ namespace Imagenary
             }
             else if (fileName.Contains(".accdb"))
             {
-                connectionString =
-        @"Provider=Microsoft.Jet.OLEDB.4.0;" +
-        @"Data Source=" + fileName + ""; 
-            
+                connectionString ="Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+fileName+";Persist Security Info=False"; 
             }
             else 
             {
@@ -60,14 +78,23 @@ namespace Imagenary
 
         public Property GetRecordByID(string ID)
         {
+            KillProcesses("MSACCESS");
             int count = 0;
             Property Record = new Property();
             string ConnectionString = GetConnectionString(FileName);
-            using (OleDbConnection conn = new OleDbConnection())
-            {
-                conn.Open();
-                cmd = new OleDbCommand("Select * FROM SPHFile WHERE PropertyID= @id");
-                cmd.Parameters.AddWithValue("id", ID);
+            using (OleDbConnection conn = new OleDbConnection(ConnectionString))
+            {              
+                cmd = new OleDbCommand("Select * FROM ["+TableName+"] WHERE ["+TableName+"].[PropertyID]= @id",conn);
+                cmd.Parameters.AddWithValue("@id",ID);
+                try
+                {
+                    conn.Open();
+                }
+                catch (Exception ex)
+                {
+                    oLEDBLog = "Can not Open Connection because " + ex.Message + "\n";
+                    return null;
+                }                
                 OleDbDataReader reader = cmd.ExecuteReader();
 
                 if (reader.HasRows == false)
@@ -76,10 +103,12 @@ namespace Imagenary
                 }
                 else
                 {
+
                     while (reader.Read())
                     {
+                        Record.PropertyID = ID;
                         Record.Source = reader["Source"].ToString();
-                        Record.FullAddress = reader["FullAdress"].ToString();
+                        Record.FullAddress = reader["FullAddress"].ToString();
                         Record.StreetAddress = reader["StreetAddress"].ToString();
                         Record.PostalCode = reader["PostalCode"].ToString();
                         Record.Price = reader["Price"].ToString();
@@ -95,191 +124,120 @@ namespace Imagenary
             }
             if (count > 1)
             {
-                throw new Exception("Primary Key is violated.\n" + --count + " Records contains same ID");
+                oLEDBLog="Primary Key is violated.\n"+ --count + "Records contains same ID";
+                //throw new Exception("Primary Key is violated.\n" + --count + " Records contains same ID");
             }
-
             return Record;
         }
-        private void Insert()
+        public void AddToDB(Dictionary<string, string> parameters)
         {
- 
-        
-        
-        
-        
-        }
-        public void AddToDB(Dictionary<string,string> parameters)
-        {
+            KillProcesses("MSACCESS");
             Property Record = new Property();
-            if (String.IsNullOrEmpty(FileName))
+            if (String.IsNullOrEmpty(FileName) || String.IsNullOrEmpty(TableName))
             {
-                throw new Exception("File Name can not be null ");
+                oLEDBLog = "File Name OR Table Name can not be null\n";
+                return;
+                //throw new Exception("File Name OR Table Name can not be null");
             }
             string ConnectionString = GetConnectionString(FileName);
             using (OleDbConnection conn = new OleDbConnection(ConnectionString))
             {
-
-                conn.Open();
-
-                StringBuilder Updatebuilder = new StringBuilder("UPDATE @FileName SET ");
+                StringBuilder Updatebuilder = new StringBuilder(@"UPDATE [" + TableName + "] SET ");
                 foreach (var x in parameters.Keys)
                 {
-                    Updatebuilder.Append(x + "=@"+x+",");
+                    Updatebuilder.Append("[" + TableName + "].[" + x + "]=@" + x + ",");
                 }
-                Updatebuilder.Remove(Updatebuilder.Length - 2, 1);
-                cmd = new OleDbCommand(Updatebuilder.ToString());
-                cmd.Parameters.AddWithValue("@FileName", FileName);
+                Updatebuilder.Remove(Updatebuilder.Length - 1, 1);
+                Updatebuilder.Append(" WHERE ["+TableName+"].[PropertyID]=@PropertyID");
+                cmd = new OleDbCommand(Updatebuilder.ToString(), conn);
                 foreach (var x in parameters.Keys)
                 {
                     cmd.Parameters.AddWithValue("@" + x, parameters[x]);
                 }
-                
-
-                #region Adding Update Parameters
-                //if (parameters.ContainsKey("Source"))
-                //{
-                //    cmd.Parameters.AddWithValue("Source", parameters["Source"]);
-                //}
-                //else
-                //{
-                //    cmd.Parameters.AddWithValue("Source", null);
-                //}
-
-                //if (parameters.ContainsKey("FullAddress"))
-                //{
-                //    cmd.Parameters.AddWithValue("FullAddress", parameters["FullAddress"]);
-                //}
-                //else
-                //{
-                //    cmd.Parameters.AddWithValue("FullAddress", null);
-                //}
-
-
-                //if (parameters.ContainsKey("StreetAddress"))
-                //{
-                //    cmd.Parameters.AddWithValue("StreetAddress", parameters["StreetAddress"]);
-                //}
-                //else
-                //{
-                //    cmd.Parameters.AddWithValue("StreetAddress", null);
-                //}
-
-
-
-                //if (parameters.ContainsKey("PostalCode"))
-                //{
-                //    cmd.Parameters.AddWithValue("PostalCode", parameters["PostalCode"]);
-                //}
-                //else
-                //{
-                //    cmd.Parameters.AddWithValue("PostalCode", null);
-                //}
-
-
-
-                //if (parameters.ContainsKey("Price"))
-                //{
-                //    cmd.Parameters.AddWithValue("Price", parameters["Price"]);
-                //}
-                //else
-                //{
-                //    cmd.Parameters.AddWithValue("Price", null);
-                //}
-
-
-
-                //if (parameters.ContainsKey("MarketedDate"))
-                //{
-                //    cmd.Parameters.AddWithValue("MarketedDate", parameters["MarketedDate"]);
-                //}
-                //else
-                //{
-                //    cmd.Parameters.AddWithValue("MarketedDate", null);
-                //}
-
-
-                //if (parameters.ContainsKey("MarketedBy"))
-                //{
-                //    cmd.Parameters.AddWithValue("MarketedBy", parameters["MarketedBy"]);
-                //}
-                //else
-                //{
-                //    cmd.Parameters.AddWithValue("MarketedBy", null);
-                //}
-
-
-                //if (parameters.ContainsKey("SuccessURL"))
-                //{
-                //    cmd.Parameters.AddWithValue("SuccessURL", parameters["SuccessURL"]);
-                //}
-                //else
-                //{
-                //    cmd.Parameters.AddWithValue("SuccessURL", null);
-                //}
-
-
-                //if (parameters.ContainsKey("AddedOn"))
-                //{
-                //    cmd.Parameters.AddWithValue("AddedOn", parameters["AddedOn"]);
-                //}
-                //else
-                //{
-                //    cmd.Parameters.AddWithValue("AddedOn", null);
-                //}
-
-
-                //if (parameters.ContainsKey("LastSaleDate"))
-                //{
-                //    cmd.Parameters.AddWithValue("LastSaleDate", parameters["LastSaleDate"]);
-                //}
-                //else
-                //{
-                //    cmd.Parameters.AddWithValue("LastSaleDate", null);
-                //}
-
-
-
-                //if (parameters.ContainsKey("LastSalePrice"))
-                //{
-                //    cmd.Parameters.AddWithValue("LastSalePrice", parameters["LastSalePrice"]);
-                //}
-                //else
-                //{
-                //    cmd.Parameters.AddWithValue("LastSalePrice", null);
-                //}
-                #endregion
-            
-                
                 int RowsEffected = 0;
-
                 try
                 {
-                   RowsEffected=cmd.ExecuteNonQuery();
+                    conn.Open();
+                }
+                catch (Exception ex)
+                {
+                    oLEDBLog = "Can not Open Connection because " + ex.Message+"\n";
+                    return;
+                }
+                try
+                {
+                    RowsEffected = cmd.ExecuteNonQuery();
                 }
                 catch (OleDbException ex)
                 {
-                    throw new Exception("While ExecutingNonQuery in  Method=AddToDB(),  Class=OledbHandler",ex);
+                    oLEDBLog="While ExecutingNonQuery in  Method=AddToDB(),  Class=OledbHandler Message"+ex.Message+"\n";
+                    //throw new Exception("While ExecutingNonQuery in  Method=AddToDB(),  Class=OledbHandler", ex);
+                    return;
                 }
-
                 if (RowsEffected == 0)
                 {
-                    StringBuilder builder = new StringBuilder("INSERT INTO @FileName VALUES(");
-                    foreach (var x in parameters.Keys)
-                    {
-                        builder.Append("@" + x+",");
-                  
-                    }
-                    builder.Remove(builder.Length - 2, 1);
-                    cmd=new OleDbCommand(builder.ToString());
-                    cmd.Parameters.AddWithValue("@FileName", FileName);
-                    foreach (var x in parameters.Keys)
-                    {
-                        cmd.Parameters.AddWithValue("@" + x,parameters[x]);
-                    }
+                    Insert(parameters);
+                }
+                else {
+                    oLEDBLog = "Row is updated with PropertyID = "+parameters["PropertyID"];
+                }
+           }            
+        }
+        private void Insert(Dictionary<string,string> parameters)
+        {
+            using (OleDbConnection conn = new OleDbConnection(GetConnectionString(FileName)))
+            {
+                StringBuilder builder = new StringBuilder("INSERT INTO ["+ TableName +"] (");
+                foreach (var x in parameters.Keys)
+                {
+                    builder.Append(x+",");
+                }
+                builder.Remove(builder.Length - 1, 1);                
+                builder.Append(") VALUES(");
+                foreach (var x in parameters.Keys)
+                {
+                    builder.Append("@" + x + ",");
 
+                }
+                builder.Remove(builder.Length - 1, 1);
+                builder.Append(")");
+               cmd = new OleDbCommand(builder.ToString(), conn);
+                foreach (var x in parameters.Keys)
+                {
+                    cmd.Parameters.AddWithValue("@"+x ,parameters[x]);
+                }
+                try
+                {
+                    conn.Open();
+                }
+                catch (Exception ex)
+                {
+                    oLEDBLog = "Can not Open Connection because " + ex.Message + "\n";
+                    return;   
+                }
+                try
+                {
                     cmd.ExecuteNonQuery();
+                    oLEDBLog = "Row is inserted with ID="+parameters["PropertyID"]+"\n";
+                }
+                catch (Exception ex)
+                {
+                    oLEDBLog = "Can not Run this Query" + ex.Message + "\n";
+                    return;
+                    //throw new Exception(ex.Message);
                 }
             }
+        }
+     
+        #region CloseOpenFile
+        private Process[] GetAllProcess(string processname)
+        {
+            Process[] aProc = Process.GetProcessesByName(processname);
+
+            if (aProc.Length > 0)
+                return aProc;
+
+            else return null;
         }
 
         public void KillProcesses(string fileType)
@@ -289,11 +247,12 @@ namespace Imagenary
             {
                 for (int i = 0; i < myprc.Length; i++)
                 {
+
                     myprc[i].Kill();
                 }
             }
         }
-
+        #endregion
         public string ReadExcelFileSingle(string fileName, string sheetName, string columnNames)
         {
             string pid = null;
@@ -302,9 +261,10 @@ namespace Imagenary
             string ConnectionString = GetConnectionString(fileName);
             using (OleDbConnection conn = new OleDbConnection(ConnectionString))
             {
-                conn.Open();
+                cmd = new OleDbCommand();
                 cmd.Connection = conn;
                 cmd.CommandText = "SELECT * FROM [" + sheetName + "]  ";
+                conn.Open();
                 var x = cmd.ExecuteReader();
                 while (x.Read())
                 {
@@ -332,16 +292,6 @@ namespace Imagenary
         }
 
         #region Reading PAF file Old Code
-        [Obsolete]
-        private Process[] GetAllProcess(string processname)
-        {
-            Process[] aProc = Process.GetProcessesByName(processname);
-
-            if (aProc.Length > 0)
-                return aProc;
-
-            else return null;
-        }
         [Obsolete]
         public DataSet ReadPAFFile(string fileName, string sheetName, string PCD)
         {

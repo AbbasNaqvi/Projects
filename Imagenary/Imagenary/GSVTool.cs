@@ -259,6 +259,20 @@ namespace Imagenary
                     }
                     if (url.Equals("STREETVIEW"))
                     {
+                        if (currentUrl == 1)
+                        {
+                            ClickHide();
+                            Result = Spin(200);
+                            if (Result == 1)
+                            {
+                                IsFormalExit = true;
+                                r3.Enabled = false;
+                                this.Dispose();
+                                return;
+
+                            }
+                        }
+
                         try
                         {
                             Result = Spin(200);
@@ -411,7 +425,7 @@ namespace Imagenary
                 Bitmap bitmap = new Bitmap(bounds.Width - 70, bounds.Height - 125);
                 using (Graphics g = Graphics.FromImage(bitmap))
                 {
-                    g.CopyFromScreen(new Point(bounds.Left + 500, bounds.Top + 90), Point.Empty, bounds.Size);
+                    g.CopyFromScreen(new Point(bounds.Left + 100, bounds.Top + 90), Point.Empty, bounds.Size);
                     newbitmap = new Bitmap(bitmap);
                 }
          //       richTextBox1.Text += "Saving Image" + "... total attempts: " + attemps + "\n";
@@ -625,6 +639,21 @@ namespace Imagenary
         {
             return (y * 65536) / GetSystemMetrics(SystemMetric.SM_CYSCREEN);
         }
+        private void ClickHide()
+        {
+            // richTextBox1.Text += "Changing Angle\n";
+            MoveMouse(ApplicationDataObj.XHide, ApplicationDataObj.YHide);
+            ClickLeftMouseButton(ApplicationDataObj.XHide, ApplicationDataObj.YHide);
+
+            MouseInputData p;
+            GetCursorPos(out p);
+            Point x = new Point(p.dx, p.dy);
+
+            Point newx = PointToScreen(x);
+            newx.X = CalculateAbsoluteCoordinateX(p.dx);
+            newx.Y = CalculateAbsoluteCoordinateY(p.dy);
+            textBox1.Text = newx.X + "," + newx.Y;
+        }
         private void ClickLeft()
         {
            // richTextBox1.Text += "Changing Angle\n";
@@ -638,9 +667,6 @@ namespace Imagenary
            Point newx = PointToScreen(x); 
             newx.X= CalculateAbsoluteCoordinateX(p.dx);
             newx.Y = CalculateAbsoluteCoordinateY(p.dy);
-            
-            
-            
             textBox1.Text = newx.X + "," + newx.Y;
         }
         //public void PrintAllElements(HtmlWindow n)
@@ -745,8 +771,6 @@ namespace Imagenary
                 catch (Exception)
                 {
                  //   richTextBox1.Text = "Can not stop the clock ...Please Wait \n";
-
-
                 }
             }
             else {
@@ -790,5 +814,6 @@ namespace Imagenary
             completed = true;
 
         }
+
     }
 }

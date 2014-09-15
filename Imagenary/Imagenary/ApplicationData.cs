@@ -19,6 +19,22 @@ namespace Imagenary
 
         #region Input
 
+        private int xHide;
+
+        public int XHide
+        {
+            get { return xHide; }
+            set { xHide = value; }
+        }
+
+        private int yHide;
+
+        public int YHide
+        {
+            get { return yHide; }
+            set { yHide = value; }
+        }
+        
         private int xCoordinate;
 
         public int XCoordinate

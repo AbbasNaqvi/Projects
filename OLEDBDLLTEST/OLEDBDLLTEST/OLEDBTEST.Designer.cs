@@ -1,4 +1,4 @@
-﻿namespace Imagenary
+﻿namespace OLEDBDLLTEST
 {
     partial class OLEDBTEST
     {
@@ -341,6 +341,7 @@
             this.Controls.Add(this.textBox1);
             this.Name = "OLEDBTEST";
             this.Text = "OLEDBTEST";
+            this.Load += new System.EventHandler(this.OLEDBTEST_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

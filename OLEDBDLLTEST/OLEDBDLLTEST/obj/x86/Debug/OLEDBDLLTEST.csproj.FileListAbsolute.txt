@@ -1,0 +1,5 @@
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\OLEDBDLLTEST\OLEDBDLLTEST\obj\x86\Debug\OLEDBDLLTEST.csprojResolveAssemblyReference.cache
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\OLEDBDLLTEST\OLEDBDLLTEST\obj\x86\Debug\OLEDBDLLTEST.OLEDBTEST.resources
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\OLEDBDLLTEST\OLEDBDLLTEST\obj\x86\Debug\OLEDBDLLTEST.Properties.Resources.resources
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\OLEDBDLLTEST\OLEDBDLLTEST\obj\x86\Debug\OLEDBDLLTEST.csproj.GenerateResource.Cache
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\OLEDBDLLTEST\OLEDBDLLTEST\bin\Debug\OLEDBDLLTEST.exe.config

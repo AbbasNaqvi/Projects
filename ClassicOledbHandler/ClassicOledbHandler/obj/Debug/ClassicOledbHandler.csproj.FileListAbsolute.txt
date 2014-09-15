@@ -1,0 +1,4 @@
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ClassicOledbHandler\ClassicOledbHandler\bin\Debug\ClassicOledbHandler.dll
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ClassicOledbHandler\ClassicOledbHandler\bin\Debug\ClassicOledbHandler.pdb
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ClassicOledbHandler\ClassicOledbHandler\obj\Debug\ClassicOledbHandler.dll
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ClassicOledbHandler\ClassicOledbHandler\obj\Debug\ClassicOledbHandler.pdb

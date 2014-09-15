@@ -16,6 +16,9 @@ namespace Imagenary
         ApplicationData appdata = ApplicationData.Create;
         int XCoordinate = 0;
         int YCoordinate = 0;
+        int HideX = 0;
+        int HideY = 0;
+
         string MainFileName = null;
         string PAFFileName = null;
         string SPHFileName = null;
@@ -28,11 +31,14 @@ namespace Imagenary
             PAFFileName = appdata.PafFileAdress;
             XCoordinate = appdata.XCoordinate;
             YCoordinate = appdata.YCoordinate;
+            HideX = appdata.XHide;
+            HideY = appdata.YHide;
             ImageOutPut = appdata.ImageOutputDirectory;
             textBox1.Text = XCoordinate+","+YCoordinate;
             textBox2.Text = MainFileName;
             textBox3.Text = PAFFileName;
             textBox4.Text = SPHFileName;
+            textBox5.Text = HideX + " , " + HideY;
             textBoxImageOutput.Text = ImageOutPut;
         }
         public event InformationDownloadHandler InformationDownloadEvent;
@@ -192,9 +198,11 @@ namespace Imagenary
             browser.Document.Body.MouseDown += new HtmlElementEventHandler(Body_MouseDown);
         }
 #endregion 
-       
+        int FormOpenedType = 0;
         private void button1_Click(object sender, EventArgs e)
         {
+            
+            FormOpenedType = 1;
             f1 = new Form();
             InitializeWebBrowser();
             browser.SendToBack();
@@ -205,31 +213,44 @@ namespace Imagenary
             f1.WindowState = FormWindowState.Maximized;
             browser.Navigate("https://www.google.com/maps/place/Apartment+101+Landmark+House+11+Broadway++BRADFORD+bd1+1jb/");
             f1.Load += new EventHandler(f1_Load);
-            f1.ShowDialog();  
-            
+
+            f1.ShowDialog();
+            FormOpenedType = 0;            
+        }
+
+        void ExitButton_Click(object sender, EventArgs e)
+        {
+    
+            f1.Close();
         }
        
 
-        int count = 0;
+
         void Body_MouseDown(object sender, HtmlElementEventArgs e)
         {
-            if (count >= 3)
-            {
-                f1.Close();
-            }
-            count++;
-            Point MS =Cursor.Position;
+            
+            Point MS = Cursor.Position;
             Point p1 = new Point();
             p1.X = CalculateAbsoluteCoordinateX(MS.X);
             p1.Y = CalculateAbsoluteCoordinateY(MS.Y);
-            textBox1.Text = p1.X + "," + p1.Y;
-            XCoordinate = p1.X;
-            YCoordinate = p1.Y;
+            if (FormOpenedType == 1)
+            {
+                textBox1.Text = p1.X + "," + p1.Y;
+                XCoordinate = p1.X;
+                YCoordinate = p1.Y;
+            }
+            else if (FormOpenedType == 2)
+            {
+                textBox5.Text = p1.X + "," + p1.Y;
+                HideX = p1.X;
+                HideY = p1.Y;
+            }
         }
        
         private void buttonSave_Click_1(object sender, EventArgs e)
         {
-            if (XCoordinate==0||YCoordinate==0||String.IsNullOrEmpty(MainFileName)||String.IsNullOrEmpty(PAFFileName)||String.IsNullOrEmpty(SPHFileName))
+           
+            if (XCoordinate==0||YCoordinate==0||HideX==0||HideY==0||String.IsNullOrEmpty(MainFileName)||String.IsNullOrEmpty(PAFFileName)||String.IsNullOrEmpty(SPHFileName))
             {
                 labelError.Text = "Some Field is Missing, Complete all fields in order to proceed";
             }else{
@@ -239,6 +260,8 @@ namespace Imagenary
                 appdata.PafFileAdress = PAFFileName;
                 appdata.SPHFileAdress = SPHFileName;
                 appdata.ImageOutputDirectory = ImageOutPut;
+                appdata.XHide = HideX;
+                appdata.YHide = HideY;
                 OnInformationDownload(new EventArguments() { Name = "SET", Time = DateTime.Now, Details =MainFileName });
                 this.Close();
             }
@@ -279,6 +302,24 @@ namespace Imagenary
             dialog.ShowDialog();
             ImageOutPut = dialog.SelectedPath;
             textBoxImageOutput.Text = ImageOutPut;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            FormOpenedType = 2;
+            f1 = new Form();
+            InitializeWebBrowser();
+            browser.SendToBack();
+            f1.Size = new Size(903, 403);
+            MessageBox.Show("Once the Form is loaded, Take the cursor to the Navigation Cicle on the Top left of the image and Double Click Left From the Mouse,Remember ,You have to Double Click on either Left or Right Arrow");
+            f1.Controls.Add(browser);
+            browser.DocumentCompleted += new WebBrowserDocumentCompletedEventHandler(browser_DocumentCompleted);
+            f1.WindowState = FormWindowState.Maximized;
+            browser.Navigate("https://www.google.com/maps/place/Apartment+101+Landmark+House+11+Broadway++BRADFORD+bd1+1jb/");
+            f1.Load += new EventHandler(f1_Load);
+            f1.ShowDialog();
+            FormOpenedType = 0;
+
         }
 
     }

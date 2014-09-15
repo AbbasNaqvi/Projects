@@ -69,7 +69,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(318, 94);
+            this.button3.Location = new System.Drawing.Point(537, 10);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(73, 27);
             this.button3.TabIndex = 6;
@@ -101,14 +101,14 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(740, 66);
+            this.textBox1.Location = new System.Drawing.Point(763, 43);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 9;
             // 
             // buttonStop
             // 
-            this.buttonStop.Location = new System.Drawing.Point(318, 136);
+            this.buttonStop.Location = new System.Drawing.Point(695, 14);
             this.buttonStop.Name = "buttonStop";
             this.buttonStop.Size = new System.Drawing.Size(73, 23);
             this.buttonStop.TabIndex = 10;
@@ -118,7 +118,7 @@
             // 
             // buttonExit
             // 
-            this.buttonExit.Location = new System.Drawing.Point(318, 156);
+            this.buttonExit.Location = new System.Drawing.Point(774, 14);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(73, 23);
             this.buttonExit.TabIndex = 11;
@@ -128,7 +128,7 @@
             // 
             // ButtonSkip
             // 
-            this.ButtonSkip.Location = new System.Drawing.Point(318, 116);
+            this.ButtonSkip.Location = new System.Drawing.Point(616, 14);
             this.ButtonSkip.Name = "ButtonSkip";
             this.ButtonSkip.Size = new System.Drawing.Size(73, 23);
             this.ButtonSkip.TabIndex = 12;
@@ -141,15 +141,15 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(897, 374);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.ButtonSkip);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.buttonStop);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.webBrowser2);
+            this.Controls.Add(this.pictureBox1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
