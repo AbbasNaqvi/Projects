@@ -10,3 +10,7 @@ c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ItextSharp\I
 c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ItextSharp\ItextSharp\obj\x86\Debug\ItextSharp.exe
 c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ItextSharp\ItextSharp\obj\x86\Debug\ItextSharp.pdb
 c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ItextSharp\ItextSharp\obj\x86\Debug\ItextSharp.Form2.resources
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\ItextSharp\ItextSharp\bin\Debug\PDFNet.dll
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\ItextSharp\ItextSharp\bin\Debug\PDFNet.xml
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\ItextSharp\ItextSharp\obj\x86\Debug\ItextSharp.TestingForm.resources
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\ItextSharp\ItextSharp\obj\x86\Debug\ItextSharp.StartPage.resources

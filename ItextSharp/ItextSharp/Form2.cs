@@ -14,13 +14,14 @@ namespace ItextSharp
 {
     public partial class Form2 : Form
     {
+        FullAdress Tempadress;
+
         public Form2()
         {
             InitializeComponent();
 
             SerializationHandler handler = new SerializationHandler();
-          //  handler.DeserializeAddressesLog();
-            Print();
+           handler.DecryptFullAddress();
             richTextBox1.Update();
             textBox1.Text = @"C:\Users\jafar.baltidynamolog\Desktop\PropertyPDF\1\1.pdf";
             FillComboBox();
@@ -28,55 +29,53 @@ namespace ItextSharp
         private void FillComboBox()
         {
             comboBox1.Items.Clear();
-            AddressesLog log = AddressesLog.Create;
-            foreach (KeyValuePair<string, Adress> i in log.adressList)
+            FullAddressesLog themelogobj = FullAddressesLog.Create;
+            foreach (var x in themelogobj.ThemeList)
             {
-                comboBox1.Items.Add(i.Key);
+                comboBox1.Items.Add(x.Key);
             }
         }
-   
+
         private void buttonSearch_Click(object sender, EventArgs e)
         {
-           //AddressesLog log = AddressesLog.Create;
-           //Adress adobj= log.adressList[comboBox1.];
+            foreach (SinglePdfLine Tempadressobj in Tempadress.AdressLines)
+            {
 
-            float LLX = 0f, LLY = 0f, URX = 0f, URY = 0f;
-            PDFFuctions fuctions = new PDFFuctions();
-           if (Tempadress.LLX != 0f)
-           {
-                LLX = Tempadress.LLX;
-           }
-           if (Tempadress.LLY != 0f)
-           {
-               LLY = Tempadress.LLY;
-           }
-           if (Tempadress.URX != 0f)
-           {
-               URX = Tempadress.URX;
-           }
-           if (Tempadress.URX != 0f)
-           {
-               URY = Tempadress.URY;
-           }
-
-
-           string Document = fuctions.getParagraphByCoOrdinate(textBox1.Text, 1, (int)LLX, (int)LLY, (int)URX, (int)URY,true);
-           richTextBox1.Text = Document+"\n";
-           FindFont(Document);
-       //    richTextBox1.Text = "";
-           foreach (var x in CompareAddresses)
-           {
-           //    richTextBox1.Text += x.LLX+"\n";
-               if (x.Address.Equals(Document)&&x.FontSize==Tempadress.FontSize&&x.FontFamily.Equals(Tempadress.FontFamily)==true)
-               {
-                   richTextBox1.Text += "Adress Found  =" + x.Address + "   " + Tempadress.URX + "    " + x.URX + "  " + Tempadress.URY + "\n";
-               }
-           }
-        }
-        List<Adress> CompareAddresses;
+                float LLX = 0f, LLY = 0f, URX = 0f, URY = 0f;
+                PDFFuctions fuctions = new PDFFuctions();
+                if (Tempadressobj.LLX != 0f)
+                {
+                    LLX = Tempadressobj.LLX;
+                }
+                if (Tempadressobj.LLY != 0f)
+                {
+                    LLY = Tempadressobj.LLY;
+                }
+                if (Tempadressobj.URX != 0f)
+                {
+                    URX = Tempadressobj.URX;
+                }
+                if (Tempadressobj.URX != 0f)
+                {
+                    URY = Tempadressobj.URY;
+                }
+                string Document = fuctions.getParagraphByCoOrdinate(textBox1.Text,Tempadressobj.PageNo, (int)LLX, (int)LLY, (int)URX, (int)URY, true);
+                richTextBox1.Text += Document + "\n";
+                FindFont(Document);
+                foreach (var x in CompareAddresses)
+                {
+                    //    richTextBox1.Text += x.LLX+"\n";
+                    if (x.Address.Equals(Document) && x.FontSize == Tempadressobj.FontSize && x.FontFamily.Equals(Tempadressobj.FontFamily) == true)
+                    {
+                        richTextBox1.Text += "Adress Found  =" + x.Address + "   " + Tempadressobj.URX + "    " + x.URX + "  " + Tempadressobj.URY + "\n";
+                    }
+                }
+            }
+    }
+        List<SinglePdfLine> CompareAddresses;
         private void FindFont(string extractedText)
         {
-            CompareAddresses = new List<Adress>();
+            CompareAddresses = new List<SinglePdfLine>();
             PdfReader reader = new PdfReader(System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), textBox1.Text));
             TextWithFontExtractionStategy S = new TextWithFontExtractionStategy();
             string XmlDocument = iTextSharp.text.pdf.parser.PdfTextExtractor.GetTextFromPage(reader, 1, S);
@@ -88,7 +87,7 @@ namespace ItextSharp
                 MatchCollection collection = Regex.Matches(XmlDocument, "(?<data><span.*?" + extractedText + ".*?span>)");
                 foreach (Match x in collection)
                 {
-                    Adress adobj = new ItextSharp.Adress();
+                    SinglePdfLine adobj = new ItextSharp.SinglePdfLine();
                     string data = x.Groups["data"].Value;
                     if (data.Contains("NOTBOLD"))
                     {
@@ -127,10 +126,14 @@ namespace ItextSharp
         public void Print()
         {
             richTextBox1.Text = "";
-            AddressesLog log = AddressesLog.Create;
-            foreach (KeyValuePair<string, Adress> i in log.adressList)
+            FullAddressesLog log = FullAddressesLog.Create;
+            foreach (KeyValuePair<string,FullAdress> i in log.ThemeList)
             {
-                richTextBox1.Text += i.Value.Address + "   -   " + i.Value.DocumentType + "   -   " + i.Value.FontFamily + "   -   " + i.Value.FontSize + "   -   " + i.Value.Bold;
+                foreach (var x in i.Value.AdressLines)
+                {
+                    richTextBox1.Text += x.DocumentType+"\n";
+                }
+
             }
         }
         private void button2_Click(object sender, EventArgs e)
@@ -138,33 +141,23 @@ namespace ItextSharp
             Form1 newForm = new Form1();
             newForm.ShowDialog();
             FillComboBox();
-            Print();
+              Print();
         }
         private void Form2_FormClosing(object sender, FormClosingEventArgs e)
         {
             SerializationHandler handler = new SerializationHandler();
-            handler.SerializeAddress();
+            handler.EncryptFullAddress();
         }
-        Adress Tempadress;
+       
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            AddressesLog log = AddressesLog.Create;
-            Tempadress = new Adress();
+            FullAddressesLog log = FullAddressesLog.Create;
+            Tempadress = new FullAdress();
            
             string key = comboBox1.SelectedItem.ToString();
-            if (log.adressList.ContainsKey(key))
+            if (log.ThemeList.ContainsKey(key))
             {
-                Tempadress.DocumentType = comboBox1.SelectedText;
-                Tempadress.Address = log.adressList[key].Address;
-                Tempadress.Bold = log.adressList[key].Bold;
-                Tempadress.Color = log.adressList[key].Color;
-                Tempadress.FontFamily = log.adressList[key].FontFamily;
-                Tempadress.FontSize = log.adressList[key].FontSize;
-                Tempadress.Italic = log.adressList[key].Italic;
-                Tempadress.LLX = log.adressList[key].LLX;
-                Tempadress.LLY = log.adressList[key].LLY;
-                Tempadress.URX = log.adressList[key].URX;
-                Tempadress.URY = log.adressList[key].URY;
+                Tempadress=log.ThemeList[key];
             }
             else {
                 MessageBox.Show("Serious Error");

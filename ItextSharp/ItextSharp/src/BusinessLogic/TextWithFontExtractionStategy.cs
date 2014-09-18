@@ -7,6 +7,12 @@ using iTextSharp.text;
 
 namespace ItextSharp
 {
+    /*
+     * This is main ItextSharpClass ,actually extends the main class and implement methods
+     * 
+     */ 
+
+
     class TextWithFontExtractionStategy : iTextSharp.text.pdf.parser.ITextExtractionStrategy
     {
         //HTML buffer
@@ -46,8 +52,14 @@ namespace ItextSharp
                 Bold = "BOLD";
             }
             Color = "Not Available;";
-            Color = renderInfo.GetFillColor().ToString();
-
+            try
+            {
+                Color = renderInfo.GetFillColor().ToString();
+            }
+            catch (Exception)
+            { 
+            
+            }
             //This code assumes that if the baseline changes then we're on a newline
             Vector curBaseline = renderInfo.GetBaseline().GetStartPoint();
             Vector topRight = renderInfo.GetAscentLine().GetEndPoint();

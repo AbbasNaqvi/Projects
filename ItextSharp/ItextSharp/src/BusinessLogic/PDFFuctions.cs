@@ -11,6 +11,12 @@ namespace ItextSharp
     class PDFFuctions
     {
 
+        /*
+         * 
+         * This is main method to know the position of text... Accuracy of funtion very good 
+         * 
+         */ 
+
         public string getParagraphByCoOrdinate(string filepath, int pageno, int cordinate1, int coordinate2, int coordinate3, int coordinate4,bool filter)
         {
             PdfReader reader = new PdfReader(filepath);
@@ -32,26 +38,34 @@ namespace ItextSharp
                 return text;            
             }
         }
-        public string ReadPdfFile(string fileName)
-        {
-            StringBuilder text = new StringBuilder();
 
-            if (File.Exists(fileName))
-            {
-                PdfReader pdfReader = new PdfReader(fileName);
 
-                for (int page = 1; page <= pdfReader.NumberOfPages; page++)
-                {
-                    ITextExtractionStrategy strategy = new SimpleTextExtractionStrategy();
-                    string currentText = PdfTextExtractor.GetTextFromPage(pdfReader, page, strategy);
+        /*
+         * This method is not in use
+         * 
+         */ 
+        
 
-                    currentText = Encoding.UTF8.GetString(ASCIIEncoding.Convert(Encoding.Default, Encoding.UTF8, Encoding.Default.GetBytes(currentText)));
-                    text.Append(currentText);
-                }
-                pdfReader.Close();
-            }
-            return text.ToString();
-        }
+        //public string ReadPdfFile(string fileName)
+        //{
+        //    StringBuilder text = new StringBuilder();
+
+        //    if (File.Exists(fileName))
+        //    {
+        //        PdfReader pdfReader = new PdfReader(fileName);
+
+        //        for (int page = 1; page <= pdfReader.NumberOfPages; page++)
+        //        {
+        //            ITextExtractionStrategy strategy = new SimpleTextExtractionStrategy();
+        //            string currentText = PdfTextExtractor.GetTextFromPage(pdfReader, page, strategy);
+
+        //            currentText = Encoding.UTF8.GetString(ASCIIEncoding.Convert(Encoding.Default, Encoding.UTF8, Encoding.Default.GetBytes(currentText)));
+        //            text.Append(currentText);
+        //        }
+        //        pdfReader.Close();
+        //    }
+        //    return text.ToString();
+        //}
 
     }
 }

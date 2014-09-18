@@ -1,0 +1,10 @@
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\TestingOne\TestingOne\bin\Debug\TestingOne.exe
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\TestingOne\TestingOne\bin\Debug\TestingOne.pdb
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\TestingOne\TestingOne\bin\Debug\itextsharp.dll
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\TestingOne\TestingOne\bin\Debug\itextsharp.xml
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\TestingOne\TestingOne\obj\x86\Debug\TestingOne.csprojResolveAssemblyReference.cache
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\TestingOne\TestingOne\obj\x86\Debug\TestingOne.Form1.resources
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\TestingOne\TestingOne\obj\x86\Debug\TestingOne.Properties.Resources.resources
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\TestingOne\TestingOne\obj\x86\Debug\TestingOne.csproj.GenerateResource.Cache
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\TestingOne\TestingOne\obj\x86\Debug\TestingOne.exe
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\TestingOne\TestingOne\obj\x86\Debug\TestingOne.pdb

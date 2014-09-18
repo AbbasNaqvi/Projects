@@ -30,12 +30,12 @@ namespace ItextSharp
         {
             panel3.Enabled = false;
             textBox1.Text = @"C:\Users\jafar.baltidynamolog\Desktop\PropertyPDF\1\1.pdf";
-            textBox2.Text = "0";
-            textBox3.Text = "220";
-            textBox4.Text = "350";
-            textBox5.Text = "200";
+            //textBox2.Text = "0";
+            //textBox3.Text = "220";
+            //textBox4.Text = "350";
+            //textBox5.Text = "200";
             textBoxDocumentType.Text = "PS";
-            radioButton2.Checked = true;
+            //radioButton2.Checked = true;
         }
 
 
@@ -44,73 +44,46 @@ namespace ItextSharp
         #region Events
         private void button4_Click(object sender, EventArgs e)
         {
-            ThemeLog log = ThemeLog.Create;
-            Theme theme = new Theme();
-
-            Tempadress = new ItextSharp.Adress();
-            var x = listView1.Items;
-                foreach (ListViewItem i in x)
-                {
-                    Tempadress.Address = i.SubItems[0].Text;
-                    Tempadress.FontSize = float.Parse(i.SubItems[1].Text);
-                    Tempadress.FontFamily = i.SubItems[2].Text;
-                    Tempadress.Bold = bool.Parse(i.SubItems[3].Text);
-                    Tempadress.Italic = bool.Parse(i.SubItems[4].Text);
-                    Tempadress.Color = i.SubItems[5].Text;
-                    Tempadress.DocumentType = textBoxDocumentType.Text;
-                  
-                    if (activeRadio==1)
-                    {
-                        Tempadress.LLX = Int32.Parse(textBox2.Text);
-                        Tempadress.LLY = Int32.Parse(textBox3.Text);
-                        Tempadress.URX = Int32.Parse(textBox4.Text);
-                        Tempadress.URY = Int32.Parse(textBox5.Text);
-                    }
-                    else if(activeRadio==2)
-                    {
-                        try
-                        {
-                            Tempadress.URX = (float)numericUpDown2.Value;
-
-                        }
-                        catch (ArgumentException)
-                        {
-
-                        }
-                        try
-                        {
-                            Tempadress.URY = (float)numericUpDown3.Value;
-                        }
-                        catch (ArgumentException)
-                        {
-
-                        }
-                        try
-                        {
-                            Tempadress.LLX = (float)numericUpDown4.Value;
-                        }
-                        catch (ArgumentException)
-                        {
-
-                        }
-                        try
-                        {
-                            Tempadress.LLY = (float)numericUpDown5.Value;
-                        }
-                        catch (ArgumentException)
-                        {
-
-                        }
-
-                    }
-                    theme.ThemeAdress.Add(Tempadress);
-                    log.ThemeList.Add(theme.ThemeName, theme);
-                //AddressesLog Adlog = AddressesLog.Create;
-                //Adlog.adressList.Add(Tempadress.DocumentType, Tempadress);
-                 
-       
+            if (listView1.Items.Count == 0)
+            {
+                MessageBox.Show("Kindly Find the adresses in PDF");
+                return;
             }
-                MessageBox.Show("Saved Successfully");
+            FullAddressesLog log = FullAddressesLog.Create;
+            FullAdress theme = new FullAdress();
+            var x = listView1.Items;
+            foreach (ListViewItem i in x)
+            {
+                Tempadress = new ItextSharp.SinglePdfLine();
+                Tempadress.Address = i.SubItems[0].Text;
+                Tempadress.FontSize = float.Parse(i.SubItems[1].Text);
+                Tempadress.FontFamily = i.SubItems[2].Text;
+                Tempadress.Bold = bool.Parse(i.SubItems[3].Text);
+                Tempadress.Italic = bool.Parse(i.SubItems[4].Text);
+                Tempadress.Color = i.SubItems[5].Text;
+                Tempadress.DocumentType = textBoxDocumentType.Text;
+                Tempadress.PageNo =(int)numericUpDown1.Value;
+
+                if (i.Selected == true)
+                {
+                    Tempadress.LLX = (int)numericUpDown4.Value;
+                    Tempadress.LLY = (int)numericUpDown5.Value;
+                    Tempadress.URX = (int)numericUpDown2.Value;
+                    Tempadress.URY = (int)numericUpDown3.Value;
+                }
+                else
+                {
+                    Tempadress.URX = float.Parse(i.SubItems[6].Text);
+                    Tempadress.URY = float.Parse(i.SubItems[7].Text);
+                    Tempadress.LLX = float.Parse(i.SubItems[8].Text);
+                    Tempadress.LLY = float.Parse(i.SubItems[9].Text);
+                }
+
+                theme.AdressLines.Add(Tempadress);
+            }
+            theme.FullAdressID = Tempadress.DocumentType;
+            log.ThemeList.Add(theme.FullAdressID, theme);
+            MessageBox.Show("Saved Successfully");
         }
         private void button5_Click(object sender, EventArgs e)
         {
@@ -128,12 +101,12 @@ namespace ItextSharp
             //webBrowser1.Navigate(textBox1.Text);
             //webBrowser1.ShowPageSetupDialog();
         }
-        private void button2_Click_1(object sender, EventArgs e)
-        {
-            string ExtractedText = richTextBox1.Text;
-            FindFont(ExtractedText);
+        //private void button2_Click_1(object sender, EventArgs e)
+        //{
+        //    string ExtractedText = richTextBox1.Text;
+        //    FindFont(ExtractedText);
 
-        }
+        //}
         [STAThread]
         private void button1_Click(object sender, EventArgs e)
         {
@@ -154,21 +127,14 @@ namespace ItextSharp
         bool IsOnlyText = false;
         private void button2_Click(object sender, EventArgs e)
         {
-
-            if (activeRadio == 1)
+            if (String.IsNullOrWhiteSpace(textBoxText.Text))
             {
-                PDFFuctions functions = new PDFFuctions();
-                string Document = functions.getParagraphByCoOrdinate(textBox1.Text, Int32.Parse(numericUpDown1.Value.ToString()), Int32.Parse(textBox2.Text), Int32.Parse(textBox3.Text), Int32.Parse(textBox4.Text), Int32.Parse(textBox5.Text), false);
-                richTextBox1.Text = Document;
+                MessageBox.Show("Required Address  can not be null");
             }
-            else if (activeRadio == 2)
-            {
-
+ 
 
                 panel3.Enabled = true;
-                ///  IsOnlyText = true;
                 FindFont(textBoxText.Text);
-            }
         }
 
         #endregion
@@ -178,26 +144,21 @@ namespace ItextSharp
 
             Numeric_KeyPad_Lock = true;
             PdfReader reader = new PdfReader(System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), textBox1.Text));
-            //      richTextBox1.Text = "CheckPoint" + 1;
             TextWithFontExtractionStategy S = new TextWithFontExtractionStategy();
-            //      richTextBox1.Text = "CheckPoint" + 2;
             string XmlDocument = iTextSharp.text.pdf.parser.PdfTextExtractor.GetTextFromPage(reader, Int32.Parse(numericUpDown1.Value.ToString()), S);
-            //    richTextBox1.Text = "CheckPoint" + 3;
-
-
-
             foreach (var extractedtext in ExtractedTexts)
             {
                 try
                 {
-                    //        richTextBox1.Text = "CheckPoint" + 4;
                     string Regexe = "(?<data><span.*?" + extractedtext + ".*?span>)";
                     //        Regex RegexObj = new Regex("(?<data><span.*?"   +Regexe+ ".*?span>)");
-                    //      Regex RegexObj = new Regex(Regexe);
+                    
+                   
                     MatchCollection collection = Regex.Matches(XmlDocument, "(?<data><span.*?" + extractedtext.Replace(" ", @"\s") + ".*?span>)");
+                    
                     foreach (Match x in collection)
                     {
-                        Adress adobj = new ItextSharp.Adress();
+                        SinglePdfLine adobj = new ItextSharp.SinglePdfLine();
                         string data = x.Groups["data"].Value;
 
                         if (data.Contains("NOTBOLD"))
@@ -214,18 +175,15 @@ namespace ItextSharp
                         adobj.FontFamily = Regex.Match(data, "<span style=\"font-family:(?<data>.*?);.*?").Groups["data"].Value;
                         string FontSize = Regex.Match(data, "<span style=.*?font-size:(?<data>.*?);.*?>").Groups["data"].Value;
                         string coordinates = Regex.Match(data, "<span style=.*?coordinates:(?<data>.*?);.*?>").Groups["data"].Value;
-                        if (activeRadio == 2)
-                        {
-                            string[] splits = coordinates.Split(',');
+                      
+                        string[] splits = coordinates.Split(',');
                             adobj.URX = float.Parse(splits[0]);
                             adobj.URY = float.Parse(splits[1]);
                             adobj.LLX = float.Parse(splits[2]);
                             adobj.LLY = float.Parse(splits[3]);
 
-                        }
+                        
                         adobj.FontSize = float.Parse(FontSize);
-                        //                    ListViewItem item = new ListViewItem(new[]{extractedText,adobj.FontFamily,adobj.FontSize});
-                        richTextBox1.Text = "CheckPoint" + 5;
                         ListViewItem item = new ListViewItem();
                         item.SubItems.Add("Address");
                         item.SubItems.Add("Size");
@@ -237,100 +195,83 @@ namespace ItextSharp
                         item.SubItems.Add("URY");
                         item.SubItems.Add("LLX");
                         item.SubItems.Add("LLY");
-                        item.SubItems[0].Text = extractedText;
+                        item.SubItems[0].Text = extractedtext;
                         item.SubItems[2].Text = adobj.FontFamily;
                         item.SubItems[1].Text = adobj.FontSize.ToString();
                         item.SubItems[3].Text = adobj.Bold.ToString();
                         item.SubItems[4].Text = adobj.Italic.ToString();
                         item.SubItems[5].Text = adobj.Color.ToString();
 
-
-                        richTextBox1.Text = "CheckPoint" + 6;
-                        if (activeRadio == 1)
+                        Tempadress = new SinglePdfLine();
+                        try
                         {
-                            adobj.LLX = float.Parse(textBox2.Text);
-                            adobj.LLY = float.Parse(textBox3.Text);
-                            adobj.URX = float.Parse(textBox4.Text);
-                            adobj.URY = float.Parse(textBox5.Text);
+                            numericUpDown2.Value = (int)adobj.URX;
+                            item.SubItems[6].Text = adobj.URX.ToString();
+                            Tempadress.URX = adobj.URX;
+                        }
+                        catch (ArgumentException)
+                        {
+                            MessageBox.Show("Argument Exception while Getting numeric box ");
 
                         }
-                        else if (activeRadio == 2)
+                        try
                         {
-                            Tempadress = new Adress();
-                            try
-                            {
-                                numericUpDown2.Value = (int)adobj.URX;
-                                item.SubItems[6].Text = adobj.URX.ToString();
-                                Tempadress.URX = adobj.URX;
-                            }
-                            catch (ArgumentException)
-                            {
-
-                            }
-                            try
-                            {
-                                numericUpDown3.Value = (int)adobj.URY;
-                                Tempadress.URY = adobj.URY;
-                                item.SubItems[7].Text = adobj.URY.ToString();
-                            }
-                            catch (ArgumentException)
-                            {
-
-                            }
-                            try
-                            {
-                                numericUpDown4.Value = (int)adobj.LLX;
-                                Tempadress.LLX = adobj.LLX;
-                                item.SubItems[8].Text = adobj.LLX.ToString();
-                            }
-                            catch (ArgumentException)
-                            {
-
-                            }
-                            try
-                            {
-                                numericUpDown5.Value = (int)adobj.LLY;
-                                Tempadress.LLY = adobj.LLY;
-                                item.SubItems[9].Text = adobj.LLY.ToString();
-                            }
-                            catch (ArgumentException)
-                            {
-
-                            }
+                            numericUpDown3.Value = (int)adobj.URY;
+                            Tempadress.URY = adobj.URY;
+                            item.SubItems[7].Text = adobj.URY.ToString();
+                        }
+                        catch (ArgumentException)
+                        {
+                            MessageBox.Show("Argument Exception while Getting numeric box ");
 
                         }
+                        try
+                        {
+                            numericUpDown4.Value = (int)adobj.LLX;
+                            Tempadress.LLX = adobj.LLX;
+                            item.SubItems[8].Text = adobj.LLX.ToString();
+                        }
+                        catch (ArgumentException)
+                        {
+                            MessageBox.Show("Argument Exception while Getting numeric box ");
+                        }
+                        try
+                        {
+                            numericUpDown5.Value = (int)adobj.LLY;
+                            Tempadress.LLY = adobj.LLY;
+                            item.SubItems[9].Text = adobj.LLY.ToString();
+                        }
+                        catch (ArgumentException)
+                        {
+                            MessageBox.Show("Argument Exception while Getting numeric box ");
+                        }
+
                         adobj.DocumentType = textBoxDocumentType.Text;
-                        richTextBox1.Text = "CheckPoint" + 7;
-
                         listView1.Items.Add(item);
                         listView1.Update();
-                        richTextBox1.Text = XmlDocument;
                         Numeric_KeyPad_Lock = false;
                         radioButton3.Checked = true;
-
                     }
-                    //                richTextBox1.Text += XmlDocument;
                 }
-                catch (ArgumentException ex)
+                catch (ArgumentException)
                 {
-                    MessageBox.Show("Argument Exception in Regex");
-                    // Syntax error in the regular expression
+                    MessageBox.Show("Input String contains invalid characters");
                 }
             }
 
         }
-        private string ReadParagraph()
-        {
-            PdfReader reader = new PdfReader(textBox1.Text);
-            AcroFields form = reader.AcroFields;
-            var fields = form.Fields;
-            foreach (var x in fields)
-            {
-                richTextBox1.Text += x.Key + "  , " + x.Value;
-            }
-            return null;
-        }
-        private string FindAdress(Adress ad)
+        //private string ReadParagraph()
+        //{
+        //    PdfReader reader = new PdfReader(textBox1.Text);
+        //    AcroFields form = reader.AcroFields;
+        //    var fields = form.Fields;
+        //    foreach (var x in fields)
+        //    {
+        //        richTextBox1.Text += x.Key + "  , " + x.Value;
+        //    }
+        //    return null;
+        //}
+        private string FindAdress(SinglePdfLine ad)
         {
             string ResultAddress = null;
             PdfReader reader = new PdfReader(System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), textBox1.Text));
@@ -355,12 +296,28 @@ namespace ItextSharp
             }
             return Result;
         }
-        Adress Tempadress;
-
+        SinglePdfLine Tempadress;
+        int SelectedIndex = 0;
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (Tempadress != null && Tempadress.URX != 0f && Tempadress.URY != 0f && Tempadress.LLX != 0f && Tempadress.LLY != 0f)
+            {
+                listView1.Items[SelectedIndex].SubItems[6].Text = Tempadress.URX.ToString();
+                listView1.Items[SelectedIndex].SubItems[7].Text = Tempadress.URY.ToString();
+                listView1.Items[SelectedIndex].SubItems[8].Text = Tempadress.LLX.ToString();
+                listView1.Items[SelectedIndex].SubItems[9].Text = Tempadress.LLY.ToString();
+            }
+
+
+            //Only one item is allowed to select so selected index is also one
+            var selectedCollection = listView1.SelectedItems;
+            foreach (ListViewItem i in selectedCollection)
+            {
+                SelectedIndex = i.Index;
+            }
+
             panel3.Enabled = true;
-            Tempadress = new ItextSharp.Adress();
+            Tempadress = new ItextSharp.SinglePdfLine();
             var x = listView1.SelectedItems;
             foreach (ListViewItem i in x)
             {
@@ -370,15 +327,7 @@ namespace ItextSharp
                 Tempadress.Bold = bool.Parse(i.SubItems[3].Text);
                 Tempadress.Italic = bool.Parse(i.SubItems[4].Text);
                 Tempadress.Color = i.SubItems[5].Text;
-                if (activeRadio == 1)
-                {
-                    Tempadress.LLX = Int32.Parse(textBox2.Text);
-                    Tempadress.LLY = Int32.Parse(textBox3.Text);
-                    Tempadress.URX = Int32.Parse(textBox4.Text);
-                    Tempadress.URY = Int32.Parse(textBox5.Text);
-                }
-                else if (activeRadio == 2)
-                {
+
                     try
                     {
                         Tempadress.URX = float.Parse(i.SubItems[6].Text);
@@ -415,49 +364,29 @@ namespace ItextSharp
                 Numeric_KeyPad_Lock = false;
                 listView1.Select();
                 listView1.HideSelection = false;
-            }
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            if (radioButton1.Checked == true)
-            {
-                activeRadio = 1;
-                textBox2.Enabled = true;
-                textBox3.Enabled = true;
-                textBox4.Enabled = true;
-                textBox5.Enabled = true;
-                label2.Enabled = true;
-                label3.Enabled = true;
-                label4.Enabled = true;
-                label5.Enabled = true;
-                textBoxText.Enabled = false;
-                textBoxAgent.Enabled = false;
-                label8.Enabled = false;
-                label9.Enabled = false;
-            }
+            //if (radioButton1.Checked == true)
+            //{
+            //    activeRadio = 1;
+            //    textBox2.Enabled = true;
+            //    textBox3.Enabled = true;
+            //    textBox4.Enabled = true;
+            //    textBox5.Enabled = true;
+            //    label2.Enabled = true;
+            //    label3.Enabled = true;
+            //    label4.Enabled = true;
+            //    label5.Enabled = true;
+            //    textBoxText.Enabled = false;
+
+            //    label8.Enabled = false;
+
+            //}
         }
 
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-            if (radioButton2.Checked == true)
-            {
-                activeRadio = 2;
-                textBox2.Enabled = false;
-                textBox3.Enabled = false;
-                textBox4.Enabled = false;
-                textBox5.Enabled = false;
-                label2.Enabled = false;
-                label3.Enabled = false;
-                label4.Enabled = false;
-                label5.Enabled = false;
-                textBoxText.Enabled = true;
-                textBoxAgent.Enabled = true;
-                label8.Enabled = true;
-                label9.Enabled = true;
 
-            }
-        }
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
@@ -544,5 +473,43 @@ namespace ItextSharp
                 }
             }
         }
+
+        private void buttonRemove_Click(object sender, EventArgs e)
+        {
+            var x = listView1.SelectedItems;
+            foreach (ListViewItem i in x)
+            {
+                listView1.Items.Remove(i);
+            }
+            listView1.Update();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+
+            try
+            {
+                PDFFuctions functions = new PDFFuctions();
+                Tempadress.Address = Tempadress.Address.Trim();
+                var items = listView1.SelectedItems;
+                if (items.Count <= 0)
+                {
+                    MessageBox.Show("You must select one item");
+                }
+                foreach (ListViewItem x in items)
+                {
+                    string text = functions.getParagraphByCoOrdinate(textBox1.Text,(int)numericUpDown1.Value, (int)numericUpDown4.Value, (int)numericUpDown5.Value, (int)numericUpDown2.Value, (int)numericUpDown3.Value, true);
+                    MessageBox.Show("Retreived Value is" + text);
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Kindly Find the adress in PDF first");
+            }
+        }
+
+
+
+
     }
 }

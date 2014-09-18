@@ -6,8 +6,13 @@ using System.Text;
 namespace ItextSharp
 {
    [Serializable]
-    class Adress
+    class SinglePdfLine
     {
+       /* Adress is actually a particular text ..That is used to save represent line extracted from pdf
+        * 
+        */ 
+
+
         private string documentType;
 
         public string DocumentType
@@ -109,7 +114,14 @@ namespace ItextSharp
             get { return color; }
             set { color = value; }
         }
-        
 
+        private int pageno;
+
+        public int PageNo
+        {
+            get { return pageno; }
+            set { pageno = value; }
+        }
+        
     }
 }

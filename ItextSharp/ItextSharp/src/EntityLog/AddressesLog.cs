@@ -5,9 +5,15 @@ using System.Text;
 
 namespace ItextSharp
 {
+    [Obsolete]
     class AddressesLog
     {
-       public Dictionary<string,Adress> adressList = new Dictionary<string,Adress>();
+        /*
+         * This Class is not in use
+         *  
+         */ 
+
+       public Dictionary<string,SinglePdfLine> adressList = new Dictionary<string,SinglePdfLine>();
         static AddressesLog log = new AddressesLog();
         static public AddressesLog Create
         {
