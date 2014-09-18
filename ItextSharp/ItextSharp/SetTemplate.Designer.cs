@@ -1,7 +1,7 @@
 ﻿using System.Threading;
 namespace ItextSharp
 {
-    partial class Form1
+    partial class SetTemplate
     {
         /// <summary>
         /// Required designer variable.

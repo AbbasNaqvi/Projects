@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ItextSharp", "ItextSharp\ItextSharp.csproj", "{6382AD83-1ACB-4D7D-9314-942462519738}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PDF Adress Extractor", "ItextSharp\PDF Adress Extractor.csproj", "{6382AD83-1ACB-4D7D-9314-942462519738}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

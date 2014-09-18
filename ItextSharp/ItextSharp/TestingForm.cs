@@ -9,6 +9,13 @@ using System.Windows.Forms;
 
 namespace ItextSharp
 {
+
+    /*
+     * This has nothing to do with Fuctionality
+     * it was added to check accuracy of pdftron
+     * 
+     */ 
+
     public partial class TestingForm : Form
     {
         public TestingForm()
@@ -51,6 +58,11 @@ namespace ItextSharp
             tron.example4_advanced = false;
             tron.ReadAdvanced(textBox1.Text);
             richTextBox1.Text = tron.ConsoleLog;
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
 

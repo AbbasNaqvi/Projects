@@ -14,10 +14,10 @@ using System.Text.RegularExpressions;
 
 namespace ItextSharp
 {
-    public partial class Form1 : Form
+    public partial class SetTemplate : Form
     {
 
-        public Form1()
+        public SetTemplate()
         {
             InitializeComponent();
         }

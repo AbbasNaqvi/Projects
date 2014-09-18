@@ -1,6 +1,6 @@
 ﻿namespace ItextSharp
 {
-    partial class Form2
+    partial class FirstPage
     {
         /// <summary>
         /// Required designer variable.

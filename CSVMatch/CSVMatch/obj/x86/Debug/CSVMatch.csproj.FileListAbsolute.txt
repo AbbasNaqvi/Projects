@@ -1,0 +1,8 @@
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\CSVMatch\CSVMatch\bin\Debug\CSVMatch.exe
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\CSVMatch\CSVMatch\bin\Debug\CSVMatch.pdb
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\CSVMatch\CSVMatch\obj\x86\Debug\CSVMatch.Form1.resources
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\CSVMatch\CSVMatch\obj\x86\Debug\CSVMatch.Properties.Resources.resources
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\CSVMatch\CSVMatch\obj\x86\Debug\CSVMatch.csproj.GenerateResource.Cache
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\CSVMatch\CSVMatch\obj\x86\Debug\CSVMatch.exe
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\CSVMatch\CSVMatch\obj\x86\Debug\CSVMatch.pdb
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\CSVMatch\CSVMatch\obj\x86\Debug\CSVMatch.csprojResolveAssemblyReference.cache

@@ -12,11 +12,11 @@ using System.Globalization;
 
 namespace ItextSharp
 {
-    public partial class Form2 : Form
+    public partial class FirstPage : Form
     {
         FullAdress Tempadress;
 
-        public Form2()
+        public FirstPage()
         {
             InitializeComponent();
 
@@ -138,7 +138,7 @@ namespace ItextSharp
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            Form1 newForm = new Form1();
+            SetTemplate newForm = new SetTemplate();
             newForm.ShowDialog();
             FillComboBox();
               Print();
