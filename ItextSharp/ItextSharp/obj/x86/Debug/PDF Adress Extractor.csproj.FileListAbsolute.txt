@@ -1,0 +1,16 @@
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ItextSharp\ItextSharp\obj\x86\Debug\Interop.PDFPreviewHandlerHostLib.dll
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ItextSharp\ItextSharp\obj\x86\Debug\PDF Adress Extractor.csproj.ResolveComReference.cache
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ItextSharp\ItextSharp\obj\x86\Debug\ItextSharp.pdb
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ItextSharp\ItextSharp\bin\Debug\ItextSharp.exe
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ItextSharp\ItextSharp\bin\Debug\ItextSharp.pdb
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ItextSharp\ItextSharp\bin\Debug\itextsharp.dll
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ItextSharp\ItextSharp\bin\Debug\PDFNet.dll
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ItextSharp\ItextSharp\bin\Debug\itextsharp.xml
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ItextSharp\ItextSharp\bin\Debug\PDFNet.xml
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ItextSharp\ItextSharp\obj\x86\Debug\PDF Adress Extractor.csprojResolveAssemblyReference.cache
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ItextSharp\ItextSharp\obj\x86\Debug\ItextSharp.SetTemplate.resources
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ItextSharp\ItextSharp\obj\x86\Debug\ItextSharp.FirstPage.resources
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ItextSharp\ItextSharp\obj\x86\Debug\ItextSharp.Properties.Resources.resources
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ItextSharp\ItextSharp\obj\x86\Debug\ItextSharp.TestingForm.resources
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ItextSharp\ItextSharp\obj\x86\Debug\PDF Adress Extractor.csproj.GenerateResource.Cache
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ItextSharp\ItextSharp\obj\x86\Debug\ItextSharp.exe

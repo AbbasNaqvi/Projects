@@ -1,0 +1,7 @@
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ZooplaNotify\ZooplaNotify\obj\x86\Debug\ZooplaNotify.Form1.resources
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ZooplaNotify\ZooplaNotify\obj\x86\Debug\ZooplaNotify.Properties.Resources.resources
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ZooplaNotify\ZooplaNotify\obj\x86\Debug\ZooplaNotify.csproj.GenerateResource.Cache
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ZooplaNotify\ZooplaNotify\bin\Debug\ZooplaNotify.exe
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ZooplaNotify\ZooplaNotify\bin\Debug\ZooplaNotify.pdb
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ZooplaNotify\ZooplaNotify\obj\x86\Debug\ZooplaNotify.exe
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ZooplaNotify\ZooplaNotify\obj\x86\Debug\ZooplaNotify.pdb

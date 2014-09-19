@@ -82,7 +82,11 @@ namespace ItextSharp
                 theme.AdressLines.Add(Tempadress);
             }
             theme.FullAdressID = Tempadress.DocumentType;
-            log.ThemeList.Add(theme.FullAdressID, theme);
+            if (log.ThemeList.ContainsKey(theme.FullAdressID))
+            {
+                log.ThemeList.Remove(theme.FullAdressID);
+            }
+            log.ThemeList.Add(theme.FullAdressID, theme);            
             MessageBox.Show("Saved Successfully");
         }
         private void button5_Click(object sender, EventArgs e)
