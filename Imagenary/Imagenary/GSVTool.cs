@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -483,7 +483,7 @@ namespace Imagenary
             {
                 foreach (HtmlElement el in webBrowser2.Document.GetElementsByTagName("A"))
                 {
-                    if (el.GetAttribute("jsaction") == "app.loadVPageUrl")
+                    if (el.GetAttribute("jsaction").Equals("app.loadVPageUrl"))
                     {
                         el.InvokeMember("Click");
                         Invoked = true;

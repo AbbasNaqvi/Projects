@@ -503,7 +503,7 @@ namespace ItextSharp
                 foreach (ListViewItem x in items)
                 {
                     string text = functions.getParagraphByCoOrdinate(textBox1.Text,(int)numericUpDown1.Value, (int)numericUpDown4.Value, (int)numericUpDown5.Value, (int)numericUpDown2.Value, (int)numericUpDown3.Value, true);
-                    MessageBox.Show("Retreived Value is" + text);
+                    MessageBox.Show("Retreived Value is " + text);
                 }
             }
             catch (Exception)

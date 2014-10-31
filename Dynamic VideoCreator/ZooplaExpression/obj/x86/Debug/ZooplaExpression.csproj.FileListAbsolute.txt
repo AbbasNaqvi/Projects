@@ -1,0 +1,16 @@
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ZooplaExpression\ZooplaExpression\bin\Debug\ZooplaExpression.exe
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ZooplaExpression\ZooplaExpression\bin\Debug\ZooplaExpression.pdb
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ZooplaExpression\ZooplaExpression\obj\x86\Debug\ZooplaExpression.Form1.resources
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ZooplaExpression\ZooplaExpression\obj\x86\Debug\ZooplaExpression.Properties.Resources.resources
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ZooplaExpression\ZooplaExpression\obj\x86\Debug\ZooplaExpression.csproj.GenerateResource.Cache
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ZooplaExpression\ZooplaExpression\obj\x86\Debug\ZooplaExpression.exe
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ZooplaExpression\ZooplaExpression\obj\x86\Debug\ZooplaExpression.pdb
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ZooplaExpression\ZooplaExpression\obj\x86\Debug\ZooplaExpression.csprojResolveAssemblyReference.cache
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ZooplaExpression\ZooplaExpression\output\ZooplaExpression.exe
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ZooplaExpression\ZooplaExpression\output\ZooplaExpression.pdb
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ZooplaExpression\ZooplaExpression\output\AForge.Video.dll
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ZooplaExpression\ZooplaExpression\output\AForge.dll
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ZooplaExpression\ZooplaExpression\output\AForge.Video.FFMPEG.xml
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ZooplaExpression\ZooplaExpression\output\AForge.Video.xml
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ZooplaExpression\ZooplaExpression\output\AForge.xml
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ZooplaExpression\ZooplaExpression\output\ZooplaExpression.exe.config

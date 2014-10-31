@@ -1,0 +1,9 @@
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\Right Move - Bedroom Count\Right Move - Bedroom Count\bin\Debug\Right Move - Bedroom Count.exe
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\Right Move - Bedroom Count\Right Move - Bedroom Count\bin\Debug\Right Move - Bedroom Count.pdb
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\Right Move - Bedroom Count\Right Move - Bedroom Count\obj\x86\Debug\Right_Move___Bedroom_Count.Form1.resources
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\Right Move - Bedroom Count\Right Move - Bedroom Count\obj\x86\Debug\Right_Move___Bedroom_Count.Properties.Resources.resources
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\Right Move - Bedroom Count\Right Move - Bedroom Count\obj\x86\Debug\Right Move - Bedroom Count.csproj.GenerateResource.Cache
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\Right Move - Bedroom Count\Right Move - Bedroom Count\obj\x86\Debug\Right Move - Bedroom Count.exe
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\Right Move - Bedroom Count\Right Move - Bedroom Count\obj\x86\Debug\Right Move - Bedroom Count.pdb
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\Right Move - Bedroom Count\Right Move - Bedroom Count\Output\Right Move - Bedroom Count.exe
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\Right Move - Bedroom Count\Right Move - Bedroom Count\Output\Right Move - Bedroom Count.pdb

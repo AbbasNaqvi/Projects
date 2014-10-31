@@ -1,0 +1,17 @@
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ZooplaVideoMaker\ZooplaVideoMaker\bin\Debug\Properties\Settings.Designer.cs
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ZooplaVideoMaker\ZooplaVideoMaker\bin\Debug\Properties\Settings.settings
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ZooplaVideoMaker\ZooplaVideoMaker\bin\Debug\ZooplaVideoMaker.exe
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ZooplaVideoMaker\ZooplaVideoMaker\bin\Debug\ZooplaVideoMaker.pdb
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ZooplaVideoMaker\ZooplaVideoMaker\bin\Debug\AForge.dll
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ZooplaVideoMaker\ZooplaVideoMaker\bin\Debug\AForge.Video.dll
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ZooplaVideoMaker\ZooplaVideoMaker\bin\Debug\AForge.Video.FFMPEG.dll
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ZooplaVideoMaker\ZooplaVideoMaker\bin\Debug\AForge.xml
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ZooplaVideoMaker\ZooplaVideoMaker\bin\Debug\AForge.Video.xml
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ZooplaVideoMaker\ZooplaVideoMaker\bin\Debug\AForge.Video.FFMPEG.xml
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ZooplaVideoMaker\ZooplaVideoMaker\obj\x86\Debug\ZooplaVideoMaker.Form1.resources
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ZooplaVideoMaker\ZooplaVideoMaker\obj\x86\Debug\ZooplaVideoMaker.Properties.Resources.resources
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ZooplaVideoMaker\ZooplaVideoMaker\obj\x86\Debug\ZooplaVideoMaker.csproj.GenerateResource.Cache
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ZooplaVideoMaker\ZooplaVideoMaker\obj\x86\Debug\ZooplaVideoMaker.exe
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ZooplaVideoMaker\ZooplaVideoMaker\obj\x86\Debug\ZooplaVideoMaker.pdb
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ZooplaVideoMaker\ZooplaVideoMaker\bin\Debug\ZooplaVideoMaker.exe.config
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ZooplaVideoMaker\ZooplaVideoMaker\obj\x86\Debug\ZooplaVideoMaker.csprojResolveAssemblyReference.cache

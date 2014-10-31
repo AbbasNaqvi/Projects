@@ -5,3 +5,4 @@ c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ZooplaNotify
 c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ZooplaNotify\ZooplaNotify\bin\Debug\ZooplaNotify.pdb
 c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ZooplaNotify\ZooplaNotify\obj\x86\Debug\ZooplaNotify.exe
 c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ZooplaNotify\ZooplaNotify\obj\x86\Debug\ZooplaNotify.pdb
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\ZooplaNotify\ZooplaNotify\obj\x86\Debug\ZooplaNotify.csprojResolveAssemblyReference.cache

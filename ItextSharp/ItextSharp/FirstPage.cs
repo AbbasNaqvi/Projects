@@ -35,9 +35,9 @@ namespace ItextSharp
                 comboBox1.Items.Add(x.Key);
             }
         }
-
-        private void buttonSearch_Click(object sender, EventArgs e)
+        private void SearchUsingTemplate(string text)
         {
+
             foreach (SinglePdfLine Tempadressobj in Tempadress.AdressLines)
             {
 
@@ -59,9 +59,11 @@ namespace ItextSharp
                 {
                     URY = Tempadressobj.URY;
                 }
-                string Document = fuctions.getParagraphByCoOrdinate(textBox1.Text,Tempadressobj.PageNo, (int)LLX, (int)LLY, (int)URX, (int)URY, true);
+ 
+                string Document = fuctions.getParagraphByCoOrdinate(text, Tempadressobj.PageNo, (int)LLX, (int)LLY, (int)URX, (int)URY, true);
+
                 richTextBox1.Text += Document + "\n";
-                FindFont(Document);
+                FindFont(Document,text);
                 foreach (var x in CompareAddresses)
                 {
                     //    richTextBox1.Text += x.LLX+"\n";
@@ -71,12 +73,23 @@ namespace ItextSharp
                     }
                 }
             }
-    }
+        
+        }
+        private void buttonSearch_Click(object sender, EventArgs e)
+        {
+
+            string[] filesNamess = textBox1.Text.Split(',');
+
+            foreach (var x in filesNamess)
+            {
+                SearchUsingTemplate(x);
+            }
+         }
         List<SinglePdfLine> CompareAddresses;
-        private void FindFont(string extractedText)
+        private void FindFont(string extractedText,string text)
         {
             CompareAddresses = new List<SinglePdfLine>();
-            PdfReader reader = new PdfReader(System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), textBox1.Text));
+            PdfReader reader = new PdfReader(System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), text));
             TextWithFontExtractionStategy S = new TextWithFontExtractionStategy();
             string XmlDocument = iTextSharp.text.pdf.parser.PdfTextExtractor.GetTextFromPage(reader, 1, S);
             try
@@ -119,7 +132,7 @@ namespace ItextSharp
             }
             catch (ArgumentException ex)
             {
-                MessageBox.Show("Argument Exception in Form1 Find Font");
+                MessageBox.Show("Argument Exception in Form1 Find Font  , "+ex.Message);
             }
 
         }
@@ -166,7 +179,9 @@ namespace ItextSharp
 
         private void button1_Click(object sender, EventArgs e)
         {
+            textBox1.Text = "";
             OpenFileDialog file = new OpenFileDialog();
+            file.Multiselect = true;
             file.Filter = "Pdf Files (.pdf)|*.pdf";
             try
             {
@@ -176,9 +191,17 @@ namespace ItextSharp
             {
 
             }
-            textBox1.Text = file.FileName;
-
-
+            foreach (var x in file.FileNames)
+            {
+                textBox1.Text += file.FileName+",";
+            }
+            if (file.FileNames.Count() > 0)
+            {
+                textBox1.Text = textBox1.Text.Remove(textBox1.Text.Length - 1, 1);
+            }
+                richTextBox1.Text += textBox1.Text;
+                textBox1.Update();
+            
         }
     }
 }

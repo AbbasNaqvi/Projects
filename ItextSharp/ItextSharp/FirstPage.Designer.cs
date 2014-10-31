@@ -104,7 +104,7 @@
             this.richTextBox1.BackColor = System.Drawing.SystemColors.MenuBar;
             this.richTextBox1.Location = new System.Drawing.Point(15, 97);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(519, 79);
+            this.richTextBox1.Size = new System.Drawing.Size(561, 79);
             this.richTextBox1.TabIndex = 26;
             this.richTextBox1.Text = "";
             // 
@@ -129,7 +129,7 @@
             this.button3.Text = "Browse";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // Form2
+            // FirstPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -145,7 +145,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
-            this.Name = "Form2";
+            this.Name = "FirstPage";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Form2";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form2_FormClosing);

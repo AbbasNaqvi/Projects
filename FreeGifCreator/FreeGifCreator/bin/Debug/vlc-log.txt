@@ -1,0 +1,26 @@
+﻿-- logger module started --
+main debug: VLC media player - 2.1.5 Rincewind
+main debug: Copyright © 1996-2014 the VideoLAN team
+main debug: revision 2.1.5-9-gb3fd0af
+main debug: configured with ../extras/package/win32/../../../configure  '--enable-update-check' '--enable-lua' '--enable-faad' '--enable-flac' '--enable-theora' '--enable-twolame' '--enable-quicktime' '--enable-avcodec' '--enable-merge-ffmpeg' '--enable-dca' '--enable-mpc' '--enable-libass' '--enable-x264' '--enable-schroedinger' '--enable-realrtsp' '--enable-live555' '--enable-dvdread' '--enable-shout' '--enable-goom' '--enable-caca' '--disable-sdl' '--enable-qt' '--enable-skins2' '--enable-sse' '--enable-mmx' '--enable-libcddb' '--enable-zvbi' '--disable-telx' '--enable-nls' '--disable-dirac' '--host=i686-w64-mingw32' 'host_alias=i686-w64-mingw32'
+main debug: using interface module "logger"
+main debug: looking for interface module matching "logger,none": 15 candidates
+logger: VLC media player - 2.1.5 Rincewind
+logger: Copyright © 1996-2014 the VideoLAN team
+logger: 
+Warning: if you cannot access the GUI anymore, open a command-line window, go to the directory where you installed VLC and run "vlc -I qt"
+
+logger: using logger.
+logger debug: opening logfile `vlc-log.txt'
+﻿-- logger module started --
+main debug: VLC media player - 2.1.5 Rincewind
+main debug: Copyright © 1996-2014 the VideoLAN team
+main debug: revision 2.1.5-9-gb3fd0af
+main debug: configured with ../extras/package/win32/../../../configure  '--enable-update-check' '--enable-lua' '--enable-faad' '--enable-flac' '--enable-theora' '--enable-twolame' '--enable-quicktime' '--enable-avcodec' '--enable-merge-ffmpeg' '--enable-dca' '--enable-mpc' '--enable-libass' '--enable-x264' '--enable-schroedinger' '--enable-realrtsp' '--enable-live555' '--enable-dvdread' '--enable-shout' '--enable-goom' '--enable-caca' '--disable-sdl' '--enable-qt' '--enable-skins2' '--enable-sse' '--enable-mmx' '--enable-libcddb' '--enable-zvbi' '--disable-telx' '--enable-nls' '--disable-dirac' '--host=i686-w64-mingw32' 'host_alias=i686-w64-mingw32'
+main debug: using interface module "logger"
+main debug: removing all interfaces
+main debug: exiting
+main debug: no exit handler
+main debug: removing module "logger"
+-- logger module stopped --
+-- logger module stopped --

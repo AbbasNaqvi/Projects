@@ -110,7 +110,41 @@ namespace ZooplaNotify
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            if (String.IsNullOrEmpty(textBoxDatabaseFileName.Text))
+            {
+                errorProvider1.SetError(textBoxDatabaseFileName,"FileName can not be empty");
+               
+            }
+            if (String.IsNullOrEmpty(textBoxDBTableName.Text))
+            {
+                errorProvider1.SetError(textBoxDBTableName, "DBTableName can not be empty");
+                
+            }
+            if (String.IsNullOrEmpty(textBoxEmail.Text))
+            {
+                errorProvider1.SetError(textBoxEmail, "Email can not be empty");
+             
+            }
+            if (String.IsNullOrEmpty(textBoxHost.Text))
+            {
+                errorProvider1.SetError(textBoxHost, "host can not be empty");
+              
+            }
+            if (String.IsNullOrEmpty(textBoxPassword.Text))
+            {
+                errorProvider1.SetError(textBoxPassword, "psw can not be empty");
+                
+            }
+            if (String.IsNullOrEmpty(textBoxPort.Text))
+            {
+                errorProvider1.SetError(textBoxPort, "port can not be empty");
+                
+            }
+            if (String.IsNullOrEmpty(textBoxURI.Text))
+            {
+                errorProvider1.SetError(textBoxURI, "URI can not be empty");
+                return;
+            }
             applicationData.InitialUrl = textBoxURI.Text;
             applicationData.AccessDBFileName = textBoxDatabaseFileName.Text;
             applicationData.AccessTableName = textBoxDBTableName.Text;

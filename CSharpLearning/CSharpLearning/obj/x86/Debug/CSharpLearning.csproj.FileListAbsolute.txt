@@ -1,0 +1,8 @@
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\CSharpLearning\CSharpLearning\bin\Debug\CSharpLearning.exe
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\CSharpLearning\CSharpLearning\obj\x86\Debug\CSharpLearning.Form1.resources
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\CSharpLearning\CSharpLearning\obj\x86\Debug\CSharpLearning.Properties.Resources.resources
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\CSharpLearning\CSharpLearning\obj\x86\Debug\CSharpLearning.csproj.GenerateResource.Cache
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\CSharpLearning\CSharpLearning\obj\x86\Debug\CSharpLearning.exe
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\CSharpLearning\CSharpLearning\obj\x86\Debug\CSharpLearning.pdb
+C:\Users\jafar.baltidynamolog\documents\visual studio 2010\Projects\CSharpLearning\CSharpLearning\bin\Debug\CSharpLearning.pdb
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\CSharpLearning\CSharpLearning\obj\x86\Debug\CSharpLearning.csprojResolveAssemblyReference.cache

@@ -1,0 +1,15 @@
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\SocialMedia Poster\SocialMedia Poster\bin\Debug\SocialMedia Poster.exe
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\SocialMedia Poster\SocialMedia Poster\bin\Debug\SocialMedia Poster.pdb
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\SocialMedia Poster\SocialMedia Poster\bin\Debug\Facebook.dll
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\SocialMedia Poster\SocialMedia Poster\bin\Debug\Facebook.xml
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\SocialMedia Poster\SocialMedia Poster\obj\x86\Debug\SocialMediaPoster.Form1.resources
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\SocialMedia Poster\SocialMedia Poster\obj\x86\Debug\SocialMediaPoster.Properties.Resources.resources
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\SocialMedia Poster\SocialMedia Poster\obj\x86\Debug\SocialMedia Poster.csproj.GenerateResource.Cache
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\SocialMedia Poster\SocialMedia Poster\obj\x86\Debug\SocialMedia Poster.exe
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\SocialMedia Poster\SocialMedia Poster\obj\x86\Debug\SocialMedia Poster.pdb
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\SocialMedia Poster\SocialMedia Poster\obj\x86\Debug\SocialMedia Poster.csprojResolveAssemblyReference.cache
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\SocialMedia Poster\SocialMedia Poster\bin\Debug\SocialMedia Poster.exe.config
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\SocialMedia Poster\SocialMedia Poster\bin\Debug\Newtonsoft.Json.dll
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\SocialMedia Poster\SocialMedia Poster\bin\Debug\Twitterizer2.dll
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\SocialMedia Poster\SocialMedia Poster\bin\Debug\Newtonsoft.Json.xml
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\SocialMedia Poster\SocialMedia Poster\bin\Debug\Twitterizer2.xml

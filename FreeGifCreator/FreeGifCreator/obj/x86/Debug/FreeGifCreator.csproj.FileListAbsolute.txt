@@ -1,0 +1,11 @@
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\FreeGifCreator\FreeGifCreator\obj\x86\Debug\FreeGifCreator.Form1.resources
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\FreeGifCreator\FreeGifCreator\obj\x86\Debug\FreeGifCreator.Properties.Resources.resources
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\FreeGifCreator\FreeGifCreator\obj\x86\Debug\FreeGifCreator.csproj.GenerateResource.Cache
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\FreeGifCreator\FreeGifCreator\bin\Debug\FreeGifCreator.exe
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\FreeGifCreator\FreeGifCreator\bin\Debug\FreeGifCreator.pdb
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\FreeGifCreator\FreeGifCreator\obj\x86\Debug\FreeGifCreator.exe
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\FreeGifCreator\FreeGifCreator\obj\x86\Debug\FreeGifCreator.pdb
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\FreeGifCreator\FreeGifCreator\bin\Debug\Vlc.DotNet.Core.dll
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\FreeGifCreator\FreeGifCreator\bin\Debug\Vlc.DotNet.Core.Interops.dll
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\FreeGifCreator\FreeGifCreator\bin\Debug\Vlc.DotNet.Forms.dll
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\FreeGifCreator\FreeGifCreator\obj\x86\Debug\FreeGifCreator.csprojResolveAssemblyReference.cache

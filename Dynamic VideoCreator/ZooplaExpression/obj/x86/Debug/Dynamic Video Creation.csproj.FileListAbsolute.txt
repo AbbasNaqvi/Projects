@@ -1,0 +1,14 @@
+c:\users\jafar.baltidynamolog\documents\visual studio 2010\Projects\ZooplaExpression\ZooplaExpression\output\AForge.Video.FFMPEG.xml
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\Dynamic VideoCreator\ZooplaExpression\output\ZooplaExpression.exe.config
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\Dynamic VideoCreator\ZooplaExpression\output\ZooplaExpression.exe
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\Dynamic VideoCreator\ZooplaExpression\output\ZooplaExpression.pdb
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\Dynamic VideoCreator\ZooplaExpression\output\AForge.Video.dll
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\Dynamic VideoCreator\ZooplaExpression\output\AForge.dll
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\Dynamic VideoCreator\ZooplaExpression\output\AForge.Video.xml
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\Dynamic VideoCreator\ZooplaExpression\output\AForge.xml
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\Dynamic VideoCreator\ZooplaExpression\obj\x86\Debug\ZooplaExpression.Form1.resources
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\Dynamic VideoCreator\ZooplaExpression\obj\x86\Debug\ZooplaExpression.Properties.Resources.resources
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\Dynamic VideoCreator\ZooplaExpression\obj\x86\Debug\Dynamic Video Creation.csproj.GenerateResource.Cache
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\Dynamic VideoCreator\ZooplaExpression\obj\x86\Debug\ZooplaExpression.exe
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\Dynamic VideoCreator\ZooplaExpression\obj\x86\Debug\ZooplaExpression.pdb
+C:\Users\jafar.baltidynamolog\Documents\Visual Studio 2010\Projects\Dynamic VideoCreator\ZooplaExpression\obj\x86\Debug\Dynamic Video Creation.csprojResolveAssemblyReference.cache
