@@ -249,6 +249,7 @@ namespace ZooplaExpression
         {
             OpenFileDialog dialog = new OpenFileDialog();
             dialog.Multiselect = false;
+            dialog.Filter="Image files (*.jpg, *.jpeg, *.png) | *.jpg; *.jpeg; *.png";
             if (dialog.ShowDialog() == DialogResult.OK)
             {
                 textBoximages.Text = dialog.FileName;
@@ -264,6 +265,7 @@ namespace ZooplaExpression
         {
             OpenFileDialog dialog = new OpenFileDialog();
             dialog.Multiselect = false;
+            dialog.Filter = "Window Media Files (*.wmv)|*.wmv";
             if (dialog.ShowDialog() == DialogResult.OK)
             {
                 //                MainVideoUrl = dialog.FileName;
@@ -323,7 +325,7 @@ namespace ZooplaExpression
         }
         void job_EncodeProgress(object sender, EncodeProgressEventArgs e)
         {
-            SetLabelText("Combining Video, Progress: " + e.Progress);
+            SetLabelText("Combining Video, Progress: " + Math.Round(e.Progress,2));
         }
 
 

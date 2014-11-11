@@ -39,7 +39,7 @@ namespace SocialMediaPoster
         private const string AppId = "549177888517555";
         private string FBAppSecret = "4445227995b6afe09f1688b2e9b112be";
         string FBRedirectUrl = "http://abbasnaqvi512.tumblr.com";
-        private const string ExtendedPermissions = "user_about_me,publish_stream,offline_access,publish_actions";
+        private const string ExtendedPermissions = "user_about_me,publish_stream,offline_access,publish_actions,manage_pages";
         private readonly Uri LoginUrl;
         private string accesstoken = null;
         public FacebookOAuthResult FacebookOAuthResult { get; private set; }
@@ -177,6 +177,19 @@ namespace SocialMediaPoster
             {
                 MessageBox.Show(ex.Message);
             }
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            string LoginUrl = "";
+
+          //  webBrowser1.Navigate();
 
         }
 

@@ -153,7 +153,7 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(487, 145);
+            this.linkLabel1.Location = new System.Drawing.Point(487, 164);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(62, 21);
             this.linkLabel1.TabIndex = 13;
@@ -251,10 +251,10 @@
             this.radioButton1.AutoSize = true;
             this.radioButton1.Location = new System.Drawing.Point(784, 13);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(118, 17);
+            this.radioButton1.Size = new System.Drawing.Size(96, 17);
             this.radioButton1.TabIndex = 20;
             this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Append at Begining";
+            this.radioButton1.Text = "Append at End";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // radioButton2
@@ -274,10 +274,10 @@
             this.radioButton3.AutoSize = true;
             this.radioButton3.Location = new System.Drawing.Point(784, 59);
             this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(96, 17);
+            this.radioButton3.Size = new System.Drawing.Size(124, 17);
             this.radioButton3.TabIndex = 22;
             this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Append at End";
+            this.radioButton3.Text = "Append at Beginning";
             this.radioButton3.UseVisualStyleBackColor = true;
             // 
             // Form1

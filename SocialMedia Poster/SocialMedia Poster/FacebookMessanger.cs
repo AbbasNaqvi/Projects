@@ -15,8 +15,8 @@ namespace SocialMediaPoster
             FacebookClient client = new FacebookClient(accesstoken);
             dynamic messagePost = new ExpandoObject();
             messagePost.access_token = accesstoken;
-            messagePost.picture = link;
-            // messagePost.link = "http://www.examplearticle.com";
+           // messagePost.picture = link;
+            messagePost.link = "https://soundcloud.com/syeda-kazmi/buss-ya-hussain";
             messagePost.name = caption;
             messagePost.description = description;
             dynamic result = "";
@@ -26,7 +26,10 @@ namespace SocialMediaPoster
                 }
                 else
                 {
-                    result = client.Post(String.Format("v2.1/{0}/feed", username), messagePost);
+                   // string PageTokens = client.Get("v2.1/me/accounts?access_token={0}"+ accesstoken);
+
+//                    result = client.Post("v2.1/me/feed", messagePost);
+                    result = client.Post(String.Format("v2.1/{0}/feed", username), messagePost);                    
                 }
         }
  
