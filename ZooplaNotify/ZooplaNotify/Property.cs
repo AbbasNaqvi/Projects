@@ -26,48 +26,87 @@ namespace ZooplaNotify
         }
 
         private double price;
-        
-        
-        public bool SetPrice(double newprice,bool check)
+
+
+        public bool SetPrice(double newprice, bool check, out string log)
         {
+            /*check :whethter to simply set Price or do all the process
+             * 
+             */
+               AccessHandler handler = new AccessHandler();
+            log = "";
             bool Result = false;
             if (check == true)
-            {                
-                AccessHandler handler = new AccessHandler();
+            {
+             
                 Property OldProperty = new Property();
+                //Fetch Previous Record In database
                 if ((OldProperty = handler.GetRecordByID(this.propertyID)) != null)
                 {
                     price = OldProperty.price;
-               //     title = OldProperty.title;
+                    //     title = OldProperty.title;
                     LastUpdated = OldProperty.LastUpdated;
-
                     if (price > newprice)
                     {
+
+                        log += "\nRecord is Found and Price Fall is detected\nMail is Sent\nUpdated in database";
                         //Price is decreased
                         double TenPercentOfOldPrice = (price * 10) / 100;
                         if (price - newprice >= TenPercentOfOldPrice)
                         {
-                            SendMail(newprice);
+                            try
+                            {
+                                SendMail(newprice);
+                            }
+                            catch (Exception e)
+                            {
+                                log += e.Message;
+                            
+                            }
                         }
                     }
+                    else
+                    {
+
+                        log += "\nPrice Fall is not Detected and Updated in Database";
+                    }
                     price = newprice;
-                    handler.UpdateProperty(this);
+                    try
+                    {
+                        handler.UpdateProperty(this);
+                    }
+                    catch (Exception e)
+                    {
+                        log += "\n" + e.Message;
+                    }
+
                 }
                 else
                 {
                     if (propertyID != null)
                     {
+                        log += "\nRecord is added for First time ,it was not Found in datebase";
                         price = newprice;
                         LastUpdated = DateTime.Now;
-                        handler.InsertProperty(this);
+                        try
+                        {
+                            handler.InsertProperty(this);
+                        }
+                        catch (Exception e)
+                        {
+                            log += "\n" + e.Message;
+                        }
                         Result = true;
                     }
                 }
             }
-            else {
+            else
+            {
                 price = newprice;
                 Result = true;
             }
+            log += "OLEDB LOG={ "+ handler.oLEDBLog+" }";
+
             return Result;
         }
         private void SendMail(double newPrice)
@@ -81,7 +120,7 @@ namespace ZooplaNotify
 
                 foreach (var x in data.To)
                 {
-                    mail.To.Add(x);                
+                    mail.To.Add(x);
                 }
                 mail.Subject = "Price of " + PropertyID + " is decreased from " + price + " to " + newPrice + " by more than or equal to 10 percent";
 
@@ -94,15 +133,15 @@ namespace ZooplaNotify
 </ul>";
 
                 string imagebar = "<img height=\"100\" width=\"300\" align=\"right\" src=\"http://images.vcpost.com/data/images/full/8105/zoopla.jpg?w=590\" alt=\"Google logo\">";
-   
-                mail.Body = "<h2>Price of " + PropertyID + " is decreased from " + price + " to " + newPrice + " by more than or equal to 10 percent</h2>"+ List+ imagebar;
-               
+
+                mail.Body = "<h2>Price of " + PropertyID + " is decreased from " + price + " to " + newPrice + " by more than or equal to 10 percent</h2>" + List + imagebar;
+
                 mail.IsBodyHtml = true;
                 // Can set to false, if you are sending pure text.
 
-/*                mail.Attachments.Add(new Attachment("C:\\SomeFile.txt"));
-                mail.Attachments.Add(new Attachment("C:\\SomeZip.zip"));
-                */
+                /*                mail.Attachments.Add(new Attachment("C:\\SomeFile.txt"));
+                                mail.Attachments.Add(new Attachment("C:\\SomeZip.zip"));
+                                */
                 using (SmtpClient smtp = new SmtpClient(data.Host, data.Port))
                 {
                     smtp.Credentials = new NetworkCredential(data.EmailId, data.Password);
@@ -123,6 +162,6 @@ namespace ZooplaNotify
             get { return lastUpdated; }
             set { lastUpdated = value; }
         }
-        
+
     }
 }

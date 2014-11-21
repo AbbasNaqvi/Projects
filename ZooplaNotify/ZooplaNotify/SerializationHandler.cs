@@ -9,7 +9,7 @@ namespace ZooplaNotify
 {
     class SerializationHandler
     {
-        string FileName="D://SerializeApplicationData.bin";
+        string FileName=Directory.GetCurrentDirectory()+"//SerializeApplicationData.bin";
         public void SerializeObject(ApplicationData objectToSerialize)
         {
             Stream stream = File.Open(FileName, FileMode.Create);

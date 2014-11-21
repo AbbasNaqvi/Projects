@@ -75,9 +75,12 @@ namespace ResizeImage
                 throw new Exception("Can not save Image" + ex.Message);
             }
         }
-
+        private void Test(params string[] args)
+        {
+        }
         private System.Drawing.Image resizeImage(System.Drawing.Image imgToResize, Size size)
         {
+            Test("a", "b", "c");
             //Get the image current width
             int sourceWidth = imgToResize.Width;
             //Get the image current height
